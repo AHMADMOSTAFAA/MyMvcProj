@@ -1,0 +1,42 @@
+﻿@model WebApplication2.ViewModels.CourseDetailsVM
+
+<form  asp-action="Edit" asp-controller="Course">
+    <input asp-for="Id" class="form-control"hidden >
+    <div class="mb-3">
+        <label asp-for="Name">Course name</label>
+        <input asp-for="Name" class="form-control">
+        <span asp-validation-for="Name"class="text-danger"></span>
+    </div>
+    <div class="mb-3">
+        <label asp-for="Topic">Course Topic</label>
+        <input asp-for="Topic" class="form-control">
+        <span asp-validation-for="Topic" class="text-danger"></span>
+    </div>
+    <div class="mb-3">
+        <label asp-for="InstructorId">Instructor ID</label>
+        <select asp-for="InstructorId" class="form-control">
+            @foreach (Instructor ins in @Model.instructors)
+            {
+                @if (ins.Id == Model.InstructorId)
+                {
+                    <option value="@ins.Id" selected>@ins.FName</option>
+                }
+                else
+                {
+                    <option value="@ins.Id">@ins.FName</option>
+                }
+            }
+        </select>
+
+
+
+    </div>
+
+    <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+@section scripts {
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/jquery-validation/dist/jquery.validate.min.js"></script>
+    <script src="~/lib/jquery-validation-unobtrusive/dist/jquery.validate.unobtrusive.min.js"></script>
+
+}

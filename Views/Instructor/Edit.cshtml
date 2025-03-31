@@ -1,0 +1,81 @@
+﻿@model Instructor
+<form method="post" action="/Instructor/Edit">
+    <input type="type" name="Id" value="@Model.Id" hidden   />
+    <div class="mb-3">
+        <label for="FName" class="form-label">Employee first name</label>
+        <input type="text" class="form-control" name="FName"value="@Model.FName">
+        <span asp-validation-for="FName"class="text-danger"></span>
+    </div>
+    <div class="mb-3">
+        <label for="LName" class="form-label">Employee last name</label>
+        <input type="text" class="form-control" name="LName" value="@Model.LName">
+    </div>
+    <div class="mb-3">
+        <label for="HireDate" class="form-label">Hire Date</label>
+        <input type="date"  name="HireDate" class="form-control" id="" value="@Model.HireDate">
+    </div>
+    <div class="mb-3">
+        <label for="Age" class="form-label">Age</label>
+        <input type="number" name="Age" class="form-control" id="name"value="@Model.Age">
+    </div>
+
+    <div class="mb-3">
+        <label for="Salary" class="form-label">Salary</label>
+        <input type="number" class="form-control" name="Salary" id="name" value="@Model.Salary">
+    </div>
+ 
+    <div class="mb-3">
+        <label for="IMG" class="form-label">Img</label>
+        <input type="text" class="form-control" name="IMG" id="name" value="@Model.IMG">
+    </div>
+    <div class="mb-3">
+        <label for="DepartmentId" class="form-label">Department</label>
+        <select name="DepartmentId" class="form-control">
+
+
+            @foreach (Department dept in ViewBag.departments)
+            {
+                @if(dept.Id==Model.DepartmentId){
+                <option value="@dept.Id"selected>@dept.Name</option>
+                }
+                else 
+                {
+                    <option value="@dept.Id" selected>@dept.Name</option>
+                }
+            }
+
+
+        </select>
+        <label for="courses" class="form-label">Department</label>
+        <select name="courses" class="form-control" multiple>
+
+          
+            @foreach (Course crs in ViewBag.courses)
+            {
+                @if (ViewBag.InsCources.Contains(crs.Id))
+                {
+                    <option value="@crs.Id" selected>@crs.Name</option>
+                }
+                else
+                {
+                    <option value="@crs.Id">@crs.Name</option>
+                }
+            }
+
+
+
+        </select>
+
+
+
+    </div>
+    </div>
+
+    <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+@section scripts {
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/jquery-validation/dist/jquery.validate.min.js"></script>
+    <script src="~/lib/jquery-validation-unobtrusive/dist/jquery.validate.unobtrusive.min.js"></script>
+
+}

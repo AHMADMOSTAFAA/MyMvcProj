@@ -1,0 +1,43 @@
+﻿@model List<Instructor>
+<table class="table">
+    <thead class="thead-dark">
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col">Instructor full name</th>
+            <th scope="col">HireDate</th>
+            <th scope="col">Salary</th>
+            <th scope="col">Age</th>
+            <th scope="col">Department ID</th>
+            <th scope="col">Cources</th>
+            <th scope="col">IMG</th>
+            <th scope="col">Edit</th>
+            <th scope="col">Details</th>
+            <th scope="col">Delete</th>
+
+
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (Instructor i in Model)
+        {
+            <tr>
+                <th>@i.Id</th>
+                <td>@i.FName @i.LName</td>
+                <td>@i.HireDate</td>
+                <td>@i.Salary</td>
+                <td>@i.Age</td>
+                <td>@i.DepartmentId</td>
+                <td>@foreach (Course crs in i.Courses) { <p>@crs.Name</p>}</td>
+                <td><img src="~/Images/@i.IMG" alt="Alternate Text" /></td>
+                <td scope="col"><a href="/instructor/edit/@i.Id" class="btn btn-warning">Edit</a></td>
+                <td scope="col"><a href="/instructor/DetailsVM/@i.Id" class="btn btn-success">Details</a></td>
+                <td scope="col"><a href="/instructor/Delete/@i.Id" class="btn btn-danger">Delete</a></td>
+            </tr>
+        }
+
+
+
+    </tbody>
+</table>
+<a href="/instructor/add" class="btn btn-primary">Add+</a>
+

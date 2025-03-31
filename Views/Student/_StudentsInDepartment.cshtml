@@ -1,0 +1,54 @@
+﻿@model List<Student>
+@foreach (Student s in Model)
+{
+    <tr>
+        <th>@s.Id</th>
+        <td>@s.Name</td>
+        <td>@s.Email</td>
+        <td>@s.Age</td>
+        <td>@s.Department.Id</td>
+        <td>
+            @foreach (var cs in s.Course_Stds)
+            {
+                <p>@cs.Course.Name</p>
+            }
+        </td>
+        <td>
+            @if (!string.IsNullOrEmpty(s.IMG))
+            {
+                <img src="@s.IMG" alt="Student Image" width="100" height="100" />
+
+            }
+            else
+            {
+                <p>No Image</p>
+            }
+        </td>
+       
+        <td><a href="/student/edit/@s.Id" class="btn btn-warning">Edit</a></td>
+        <td><a href="/student/detailsvm/@s.Id" class="btn btn-success">Details</a></td>
+        <td>
+            <button class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#deletemodal-@s.Id">Delete</button>
+        </td>
+    </tr>
+
+    <!-- Unique Modal for Each Student -->
+    <div class="modal" tabindex="-1" id="deletemodal-@s.Id">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header bg-danger">
+                    <h5 class="modal-title text-white">Student Delete</h5>
+                    <button type="button" class="btn-close btn-danger" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p>The student will be permanently deleted. Are you sure you want to delete?</p>
+                    <i class="bi bi-exclamation-triangle-fill text-danger"></i>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-info" data-bs-dismiss="modal">No</button>
+                    <a href="/student/delete/@s.Id" class="btn btn-danger">Delete</a>
+                </div>
+            </div>
+        </div>
+    </div>
+}

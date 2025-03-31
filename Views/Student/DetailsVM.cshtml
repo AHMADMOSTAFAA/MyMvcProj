@@ -1,0 +1,36 @@
+﻿@model WebApplication2.ViewModels.StudentDetailsVM
+<div class="card" style="width: 18rem;">
+    <img src="~/images/@Model.IMG" class="card-img-top" alt="Student image">
+    <div class="card-body">
+        <h5 class="card-title">@Model.Name</h5>
+        <h5 class="card-title">@Model.Id</h5>
+        <p class="card-text">@Model.Email</p>
+         <p class="card-text">@Model.Age</p>
+      
+        <a href="#" class="btn btn-primary">Go back</a>
+    </div>
+</div>
+<h2 class="btn bg-danger"> Courses Grades</h2>
+<ul class="list-group">
+    @for (int i = 0; i < Model.Course_Stds.Count; i++)
+    {
+        if (Model.Course_Stds[i].Degree > 90)
+        {
+            Model.color = "green";
+        }
+        else if (Model.Course_Stds[i].Degree >= 70)
+        {
+            Model.color = "yellow";
+        }
+        else if (Model.Course_Stds[i].Degree > 50)
+        {
+            Model.color = "red";
+        }
+      
+
+        <li class="list-group-item disabled bg-info" style="color:@Model.color" aria-disabled="true">
+            @Model.coursenames[i] : @Model.Course_Stds[i].Degree
+        </li>
+    }
+
+</ul>

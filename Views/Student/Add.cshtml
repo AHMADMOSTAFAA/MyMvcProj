@@ -1,0 +1,68 @@
+﻿@model WebApplication2.ViewModels.StudentDetailsVM
+@{
+    ViewBag.Action = "Add";
+
+}
+<h1>Add+</h1>
+<partial name="_Add&EditPartial" model="Model" />
+@section scripts {
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/jquery-validation/dist/jquery.validate.min.js"></script>
+    <script src="~/lib/jquery-validation-unobtrusive/dist/jquery.validate.unobtrusive.min.js"></script>
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@* <form asp-action="Add" asp-controller="Student"> *@
+ 
+@*     <div class="mb-3"> *@
+@*         <label asp-for="Name">Student name</label> *@
+@*         <input asp-for="Name" class="form-control"> *@
+@*     </div> *@
+@*     <div class="mb-3"> *@
+@*         <label asp-for="Email">Student Email</label> *@
+@*         <input asp-for="Email" class="form-control"> *@
+@*     </div> *@
+@*     <div class="mb-3"> *@
+@*         <label asp-for="IMG">Student Image</label> *@
+@*         <input asp-for="IMG" class="form-control"> *@
+@*     </div> *@
+@*     <div class="mb-3"> *@
+@*         <label asp-for="Age">Student name</label> *@
+@*         <input asp-for="Age" class="form-control"> *@
+@*     </div> *@
+   
+@*     <div class="mb-3"> *@
+@*         <label asp-for="DepartmentId" class="form-label">Departments</label> *@
+@*         <select asp-for="DepartmentId" class="form-control"> *@
+@*             @if (Model.departments != null) *@
+@*             { *@
+@*                 @foreach (Department dept in Model.departments) *@
+@*                 { *@
+@*                     <option value="@dept.Id">@dept.Name</option> *@
+@*                 } *@
+@*             } *@
+@*             else *@
+@*             { *@
+@*                 <option>No Departments available</option> *@
+@*             } *@
+@*         </select> *@
+       
+@*     </div> *@
+
+@*     <button type="submit" class="btn btn-primary">Submit</button> *@
+@* </form> *@
+
+

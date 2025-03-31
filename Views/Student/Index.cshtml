@@ -1,0 +1,49 @@
+﻿@model List<Student>
+@{
+  
+}
+<select class="form-control" onchange="Filter(this.value)">Filter By Department
+    @foreach(Department d in ViewBag.Departments ){
+        <option value="@d.Id">@d.Name</option>
+    }
+</select>
+<table class="table">
+    <thead class="thead-dark">
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col">Student</th>
+            <th scope="col">Email</th>
+            <th scope="col">Age</th>
+            <th scope="col">Department ID</th>
+            <th scope="col">Enrolled Courses</th>
+            <th scope="col">IMG</th>
+            
+            <th scope="col">Edit</th>
+            <th scope="col">Details</th>
+            <th scope="col">Delete</th>
+
+        </tr>
+    </thead >
+    <tbody id="div1">
+    <partial name="_StudentsInDepartment"model="Model" />
+    </tbody>
+</table>
+<a href="/student/Add" class="btn btn-primary">Add+</a>
+@section scripts {
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script>
+        function Filter(DeptId){
+            event.preventDefault()
+             $.ajax({
+              url: "/Student/FindStudentsInDepartment/"+DeptId,
+              
+              success: function(result)
+          {
+              console.log(result);
+            $("#div1").html(result);
+          }
+            });
+        }
+    </script>
+
+}

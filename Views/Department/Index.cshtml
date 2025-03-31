@@ -1,0 +1,43 @@
+﻿@model List<Department>
+@{
+
+}
+
+<table class="table">
+    <thead class="thead-dark">
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col">Department Name</th>
+            <th scope="col">Description</th>
+            <th scope="col">Location</th>
+            <th scope="col">Instructors</th>
+    
+
+            <th scope="col">Edit</th>
+            <th scope="col">Details</th>
+            <th scope="col">Delete</th>
+
+        </tr>
+    </thead>
+    <tbody id="div1">
+    <tbody>
+            @foreach (Department d in Model)
+            {
+            <tr>
+                <th>@d.Id</th>
+                <td>@d.Name</td>
+                <td>@d.Description</td>
+                <td>@d.Location</td>
+                <td>@foreach (Instructor i in d.Instructors)
+                        {
+                            <p>@i.FName @i.LName</p>
+                        }</td>
+          
+                <td scope="col"><a href="/instructor/edit/@d.Id" class="btn btn-warning">Edit</a></td>
+                <td scope="col"><a href="/instructor/DetailsVM/@d.Id" class="btn btn-success">Details</a></td>
+                <td scope="col"><a href="/instructor/Delete/@d.Id" class="btn btn-danger">Delete</a></td>
+            </tr>
+            }
+    </tbody>
+</table>
+<a href="/Department/Add" class="btn btn-primary">Add+</a>

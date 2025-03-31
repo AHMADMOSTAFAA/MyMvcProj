@@ -1,0 +1,61 @@
+﻿@model List<Course>
+
+@if (!string.IsNullOrEmpty(TempData.Peek("StudentName") as string))
+{
+    <h1>@TempData["StudentName"] is viewing</h1>
+}
+<a href="/Course/add" class="btn btn-primary">Add+</a>
+
+<table class="table">
+    <thead class="thead-dark">
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col">course name</th>
+            <th scope="col">Topic</th>
+            <th scope="col">Instructor Id</th>
+            <th scope="col">Edit</th>
+            <th scope="col">Delete</th>
+       
+
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (Course c in Model)
+        {
+            <tr>
+                <th>@c.Id</th>
+                <th>@c.Name</th>
+                <td>@c.Topic</td>
+                <td>@c.InstructorId</td>
+                <td><a href="/course/edit/@c.Id" class="btn btn-warning">Edit</a></td>
+                <td>
+                    <button class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#deletemodal-@c.Id">Delete</button>
+                </td>
+
+
+            </tr>
+            <!-- Unique Modal for Each Student -->
+            <div class="modal" tabindex="-1" id="deletemodal-@c.Id">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header bg-danger">
+                            <h5 class="modal-title text-white">Student Delete</h5>
+                            <button type="button" class="btn-close btn-danger" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <p>The student will be permanently deleted. Are you sure you want to delete?</p>
+                            <i class="bi bi-exclamation-triangle-fill text-danger"></i>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-info" data-bs-dismiss="modal">No</button>
+                            <a href="/course/delete/@c.Id" class="btn btn-danger">Delete</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        }
+
+
+
+    </tbody>
+</table>

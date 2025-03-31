@@ -1,0 +1,59 @@
+﻿@model DepartmentVM
+
+<form asp-action="@ViewBag.Action" asp-controller="Department">
+    @if (ViewBag.Action == "Edit")
+    {
+        <input asp-for="Id" class="form-control" hidden />
+    }
+    <div class="mb-3">
+        <label asp-for="Name">Department name</label>
+        <input asp-for="Name" class="form-control">
+    </div>
+    <div class="mb-3">
+        <label asp-for="Description">Description</label>
+        <input asp-for="Description" class="form-control">
+    </div>
+
+    <div class="mb-3">
+        <label asp-for="Location"> Location</label>
+        <input asp-for="Location" class="form-control">
+    </div>
+   
+
+    <div class="mb-3">
+        <label asp-for="Instructors" class="form-label">instructors</label>
+        <select asp-for="InstructorsIDs" class="form-control"multiple>
+            @if (Model.Instructors != null)
+            {
+                @foreach (Instructor ins in Model.AllInstructors)
+                {
+                    <option value="@ins.Id">@ins.FName @ins.LName</option>
+                }
+            }
+            else
+            {
+                <option>No instructors available</option>
+            }
+        </select>
+
+    </div>
+
+    @* @if (ViewBag.Action == "Edit") *@
+    @* { *@
+    @*     <select asp-for="SelectedCrsIDs" class="form-control" multiple> *@
+
+
+    @*         @foreach (Course crs in Model.courses) *@
+    @*         { *@
+
+
+    @*             <option value="@crs.Id" selected>@crs.Name</option> *@
+
+
+
+
+    @*         } *@
+    @*     </select> *@
+    @* } *@
+    <button type="submit" class="btn btn-primary">Submit</button>
+</form>

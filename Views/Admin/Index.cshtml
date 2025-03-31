@@ -1,0 +1,67 @@
+﻿@model List<UserWithRolesVM>
+
+<h2>Manage Users</h2>
+
+@* <div class="mb-3"> *@
+@*     <a asp-action="Create" class="btn btn-primary">Add New User</a> *@
+@* </div> *@
+
+<table class="table table-striped">
+    <thead class="thead-dark">
+        <tr>
+            <th>Username</th>
+            <th>Email</th>
+            <th>Roles</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        @if (Model?.Any() == true)
+        {
+            @foreach (var userWithRoles in Model)
+            {
+                <tr>
+                    <td>@userWithRoles.User.UserName</td>
+                    <td>@userWithRoles.User.Email</td>
+                    <td>
+                        @if (userWithRoles.Roles?.Any() == true)
+                        {
+                            <span class="badge bg-primary">@string.Join(", ", userWithRoles.Roles)</span>
+                        }
+                        else
+                        {
+                            <span class="text-muted">No roles</span>
+                        }
+                    </td>
+                    <td>
+                        <div class="btn-group" role="group">
+                            @if (!userWithRoles.Roles.Contains("Admin"))
+                            {
+                                <a asp-action="MakeAdmin" asp-route-userId="@userWithRoles.User.Id"
+                                   class="btn btn-sm btn-success">Make Admin</a>
+                            }
+                            else
+                            {
+                                <a asp-action="RemoveAdmin" asp-route-userId="@userWithRoles.User.Id"
+                                   class="btn btn-sm btn-warning">Remove Admin</a>
+                            }
+
+                            <a asp-action="DeleteUser" asp-route-userId="@userWithRoles.User.Id"
+                               class="btn btn-sm btn-danger"
+                               onclick="return confirm('Are you sure you want to delete this user?')">
+                                Delete
+                            </a>
+                        </div>
+                    </td>
+                </tr>
+            }
+        }
+        else
+        {
+            <tr>
+                <td colspan="4" class="text-center">No users found</td>
+            </tr>
+        }
+    </tbody>
+</table>
+

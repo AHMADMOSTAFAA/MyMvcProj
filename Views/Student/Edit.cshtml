@@ -1,0 +1,85 @@
+﻿@model WebApplication2.ViewModels.StudentDetailsVM
+@{
+    ViewBag.Action = "Edit";
+}
+<h1>Edit</h1>
+<partial name="_Add&EditPartial" model="Model"/>
+@section scripts {
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/jquery-validation/dist/jquery.validate.min.js"></script>
+    <script src="~/lib/jquery-validation-unobtrusive/dist/jquery.validate.unobtrusive.min.js"></script>
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@* <form asp-action="edit" asp-controller="student"> *@
+@*     <input asp-for="Id" class="form-control" hidden/> *@
+@*     <div class="mb-3"> *@
+@*         <label asp-for="Name"></label> *@
+@*         <input asp-for="Name" class="form-control" /> *@
+@*     </div> *@
+@*     <div class="mb-3"> *@
+@*         <label asp-for="Email"></label> *@
+@*         <input asp-for="Email" class="form-control" /> *@
+@*     </div> *@
+@*     <div class="mb-3"> *@
+@*         <label asp-for="IMG"></label> *@
+@*         <input asp-for="IMG" class="form-control" /> *@
+@*     </div> *@
+@*     <div class="mb-3"> *@
+@*         <label asp-for="Age"></label> *@
+@*         <input asp-for="Age" class="form-control" /> *@
+@*     </div> *@
+
+  
+@*     <div class="mb-3"> *@
+@*         <label for="DepartmentId" class="form-label">Department</label> *@
+@*         <select name="DepartmentId" class="form-control"> *@
+
+
+@*             @foreach (Department dept in Model.departments) *@
+@*             { *@
+@*                 @if(dept.Id==Model.DepartmentId){ *@
+@*                 <option value="@dept.Id"selected>@dept.Name</option> *@
+@*                 } *@
+@*                 else  *@
+@*                 { *@
+@*                     <option value="@dept.Id" selected>@dept.Name</option> *@
+@*                 } *@
+@*             } *@
+
+
+@*         </select> *@
+@*         <label asp-for="SelectedCrsIDs" class="form-label">Department</label> *@
+@*         <select asp-for="SelectedCrsIDs" class="form-control" multiple> *@
+
+
+@*             @foreach (Course crs in Model.courses) *@
+@*             { *@
+              
+                
+@*                     <option value="@crs.Id" selected>@crs.Name</option> *@
+                
+               
+                   
+                
+@*             } *@
+@*         </select> *@
+@*          <button type="submit" class="btn btn-outline-primary">Submit</button> *@
+@*         </form> *@

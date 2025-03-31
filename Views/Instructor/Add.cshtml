@@ -1,0 +1,60 @@
+﻿@model Instructor
+
+<form method="post" action="/Instructor/Add">
+    <div class="mb-3">
+        <label for="Fname" class="form-label">First name</label>
+        <input type="text" asp-for="FName" value="@Model?.FName" class="form-control" >
+        <span asp-validation-for="FName" class="text-danger"></span>
+    </div>
+    <div class="mb-3">
+        <label for="LName" class="form-label">Last name</label>
+        <input type="text" name="LName" class="form-control" value="@Model?.LName" id="">
+    </div>
+    <div class="mb-3">
+        <label for="HireDate" class="form-label">Hire Date</label>
+        <input type="date" name="HireDate" class="form-control" value="@Model?.HireDate" id="">
+    </div>
+    <div class="mb-3">
+        <label for="Salary" class="form-label">Salary</label>
+        <input type="number" name="Salary" class="form-control" value="@Model?.Salary" id="">
+    </div>
+    <div class="mb-3">
+        <label for="IMG" class="form-label">Employee Image</label>
+        <input type="text" name="IMG" class="form-control" value="@Model?.IMG" id="">
+    </div>
+    <div class="mb-3">
+        <label for="Courses" class="form-label">Courses</label>
+        <select name="courses" class="form-control"multiple>
+            @if (ViewBag.courses != null)
+            {
+                @foreach (var course in ViewBag.courses)
+                {
+                    <option value="@course.Id">@course.Name</option>
+                }
+            }
+            else
+            {
+                <option>No courses available</option>
+            }
+        </select>
+        <label for="DepartmentId" class="form-label">Department</label>
+        <select name="DepartmentId" class="form-control">
+            
+            
+                @foreach (Department dept in ViewBag.departments)
+                {
+                    <option value="@dept.Id">@dept.Name</option>
+                }
+            
+          
+        </select>
+    </div>
+
+    <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+@section scripts {
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/jquery-validation/dist/jquery.validate.min.js"></script>
+    <script src="~/lib/jquery-validation-unobtrusive/dist/jquery.validate.unobtrusive.min.js"></script>
+
+}

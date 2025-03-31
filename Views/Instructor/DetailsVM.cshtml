@@ -1,0 +1,20 @@
+﻿@model WebApplication2.ViewModels.InstructorDetailsVM
+
+<div class="card" style="width: 18rem;">
+    <img src="~/Images/@Model.IMG" class="card-img-top" alt="...">
+    <div class="card-body">
+        <h5 class="card-title">@Model.FullName</h5>
+        <p class="card-text">@Model.Id</p>
+        <p class="card-text">@Model.HireDate</p>
+
+        <p class="card-text">@Model.Salary</p>
+        <p class="card-text">@Model.Age</p>
+        <p class="card-text">@Model.DepartmentId</p>
+        <a href="/instructor/index" class="btn btn-primary">back</a>
+    </div>
+</div>
+<ul class="list-group">
+ @foreach(var course in Model.Courses){
+      <li class="list-group-item">@course</li>
+ }
+</ul>
