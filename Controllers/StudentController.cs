@@ -22,11 +22,11 @@ namespace WebApplication2.Controllers
             IDeptRepo = deptRepo;
             ICourseRepo = _ICourseRepo;
         }
-
+        [Authorize(Roles ="Admin")]
         public IActionResult Index()
         {
             var students = IStudentRepo.LoadStdWithCrses();
-            ViewBag.Departments = IDeptRepo.LoadDeparments();
+            ViewBag.Departments = IDeptRepo.LoadDeparments() ?? new List<Department>(); ;
             return View(students);
         }
 
@@ -73,7 +73,7 @@ namespace WebApplication2.Controllers
             if (ModelState.IsValid)
             {
                IStudentRepo.Add(stdvm);
-                return RedirectToAction("Index");
+                return RedirectToAction("Register", "Account", new {studentId=stdvm.Id});
             }
 
             stdvm.departments = IDeptRepo.LoadDeparments();

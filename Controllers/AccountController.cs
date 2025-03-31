@@ -5,6 +5,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Rewrite;
 using Microsoft.EntityFrameworkCore;
 using WebApplication2.Models;
+using WebApplication2.Repos.Students;
 using WebApplication2.ViewModels;
 
 namespace WebApplication2.Controllers
@@ -14,12 +15,13 @@ namespace WebApplication2.Controllers
         UserManager<ApplicationUser> _userManager;
         SignInManager<ApplicationUser> _signInManager;
         RoleManager<IdentityRole> _roleManager;
-        
-        public AccountController(UserManager<ApplicationUser>userManager,SignInManager<ApplicationUser>signInManager,RoleManager<IdentityRole>roleManager)
+        IStudentRepo _studentRepo;
+        public AccountController(UserManager<ApplicationUser>userManager,SignInManager<ApplicationUser>signInManager,RoleManager<IdentityRole>roleManager,IStudentRepo studentRepo)
         {
             _signInManager = signInManager;
             _userManager = userManager;
             _roleManager=roleManager;
+            _studentRepo=studentRepo;
         }
         [HttpGet]
         public async Task <IActionResult> Register()
@@ -28,13 +30,19 @@ namespace WebApplication2.Controllers
             return View();
         }
         [HttpPost]
-        public async Task<IActionResult> Register(RegisterVM registerVM)
+        public async Task<IActionResult> Register(RegisterVM registerVM,int?id)
         {
             if (ModelState.IsValid) { 
                 ApplicationUser applicationUser=new ApplicationUser();
                 applicationUser.UserName = registerVM.UserName;
                 applicationUser.PasswordHash = registerVM.Password;
                 applicationUser.Email = registerVM.Email;
+                if (id!=null)
+                {
+                    
+                    var student =_studentRepo.Student(id.Value);
+                    applicationUser.Email = student.Email;
+                }
                 applicationUser.Address = registerVM.Address;
                 IdentityResult identityResult=await _userManager.CreateAsync(applicationUser,registerVM.Password);//
                 if (identityResult.Succeeded) 
@@ -44,6 +52,25 @@ namespace WebApplication2.Controllers
                         IdentityResult roleResult = await _userManager.AddToRoleAsync(applicationUser, registerVM.Role);
                         if (roleResult.Succeeded)
                         {
+                            if (id.HasValue)
+                            {
+                                var student = _studentRepo.Student(id.Value);
+                                if (student != null)
+                                {
+                                    student.UserId = applicationUser.Id;
+
+                                     StudentDetailsVM StdVM = new StudentDetailsVM()
+                                     {
+                                         Id = student.Id,
+                                         Name = student.Name,
+                                         Email = student.Email,
+                                         Age = student.Age,
+                                         IMG=student.IMG,
+                                         
+                                     };
+                                   _studentRepo.Edit(StdVM);
+                                }
+                            }
                             TempData["Success"] = "User registered and assigned to role!";
                             return RedirectToAction("Login");
 

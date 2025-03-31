@@ -18,6 +18,9 @@ namespace WebApplication2.ViewModels
         public string Address { get; set; }
         [Required]
         public string Role { get; set; }
-        
+
+       
+       
+
     }
 }

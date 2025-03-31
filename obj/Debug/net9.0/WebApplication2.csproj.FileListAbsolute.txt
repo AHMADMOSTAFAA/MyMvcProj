@@ -697,3 +697,4 @@ C:\Users\Asus\Desktop\ITI\MVC\WebApplication2\obj\Debug\net9.0\refint\WebApplica
 C:\Users\Asus\Desktop\ITI\MVC\WebApplication2\obj\Debug\net9.0\WebApplication2.pdb
 C:\Users\Asus\Desktop\ITI\MVC\WebApplication2\obj\Debug\net9.0\WebApplication2.genruntimeconfig.cache
 C:\Users\Asus\Desktop\ITI\MVC\WebApplication2\obj\Debug\net9.0\ref\WebApplication2.dll
+C:\Users\Asus\Desktop\ITI\MVC\WebApplication2\obj\Debug\net9.0\WebApplication2.sourcelink.json

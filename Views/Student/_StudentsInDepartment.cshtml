@@ -6,7 +6,7 @@
         <td>@s.Name</td>
         <td>@s.Email</td>
         <td>@s.Age</td>
-        <td>@s.Department.Id</td>
+        <td>@s.Department?.Id</td>
         <td>
             @foreach (var cs in s.Course_Stds)
             {

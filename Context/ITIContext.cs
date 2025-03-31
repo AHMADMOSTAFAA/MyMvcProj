@@ -36,6 +36,11 @@ namespace WebApplication2.Context
                 .WithMany(i => i.Courses)
                 .HasForeignKey(c => c.InstructorId)
                 .OnDelete(DeleteBehavior.SetNull);
+
+            modelBuilder.Entity<Student>()
+    .HasOne(s => s.User)
+    .WithOne(u => u.Student)
+    .OnDelete(DeleteBehavior.Cascade);  // Or Restrict
         }
     }
 }

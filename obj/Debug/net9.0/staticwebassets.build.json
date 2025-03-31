@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "yftqfdUcg9j8UUudhaTvdE/rxRSTRVbJeAfumnu4aAM=",
+  "Hash": "8bOspH830ZQAT3XoTsQI74uEsILMv+FDX0NGfCRStCo=",
   "Source": "WebApplication2",
   "BasePath": "_content/WebApplication2",
   "Mode": "Default",
@@ -1716,6 +1716,27 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\favicon.ico"
+    },
+    {
+      "Identity": "C:\\Users\\Asus\\Desktop\\ITI\\MVC\\WebApplication2\\wwwroot\\Images\\7aea2ec3-6622-4382-a19f-f7bb86c3e6a9.jpg",
+      "SourceId": "WebApplication2",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Asus\\Desktop\\ITI\\MVC\\WebApplication2\\wwwroot\\",
+      "BasePath": "_content/WebApplication2",
+      "RelativePath": "Images/7aea2ec3-6622-4382-a19f-f7bb86c3e6a9#[.{fingerprint}]?.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "byub1j7sg0",
+      "Integrity": "c64kpVQOdtFKXNPGZHTOO1w1ccXPxpmnpIgAL3vdg38=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Images\\7aea2ec3-6622-4382-a19f-f7bb86c3e6a9.jpg"
     },
     {
       "Identity": "C:\\Users\\Asus\\Desktop\\ITI\\MVC\\WebApplication2\\wwwroot\\Images\\Admin.png",
@@ -5314,6 +5335,88 @@
         {
           "Name": "integrity",
           "Value": "sha256-jcY0RXFOlcp4VNTCcYQtWVZZBlr+ZY+AOv6/0S5dnF8="
+        }
+      ]
+    },
+    {
+      "Route": "Images/7aea2ec3-6622-4382-a19f-f7bb86c3e6a9.byub1j7sg0.jpg",
+      "AssetFile": "C:\\Users\\Asus\\Desktop\\ITI\\MVC\\WebApplication2\\wwwroot\\Images\\7aea2ec3-6622-4382-a19f-f7bb86c3e6a9.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "35654"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"c64kpVQOdtFKXNPGZHTOO1w1ccXPxpmnpIgAL3vdg38=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 31 Mar 2025 22:22:57 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "byub1j7sg0"
+        },
+        {
+          "Name": "label",
+          "Value": "Images/7aea2ec3-6622-4382-a19f-f7bb86c3e6a9.jpg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-c64kpVQOdtFKXNPGZHTOO1w1ccXPxpmnpIgAL3vdg38="
+        }
+      ]
+    },
+    {
+      "Route": "Images/7aea2ec3-6622-4382-a19f-f7bb86c3e6a9.jpg",
+      "AssetFile": "C:\\Users\\Asus\\Desktop\\ITI\\MVC\\WebApplication2\\wwwroot\\Images\\7aea2ec3-6622-4382-a19f-f7bb86c3e6a9.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "35654"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"c64kpVQOdtFKXNPGZHTOO1w1ccXPxpmnpIgAL3vdg38=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 31 Mar 2025 22:22:57 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-c64kpVQOdtFKXNPGZHTOO1w1ccXPxpmnpIgAL3vdg38="
         }
       ]
     },

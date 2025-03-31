@@ -16,5 +16,12 @@ namespace WebApplication2.Models
         public Department? Department { get; set; }  // Nullable to match FK
 
         public List<Course_Stds> Course_Stds { get; set; } = new List<Course_Stds>();
+
+   
+
+       
+        public string? UserId { get; set; }  
+        public ApplicationUser? User { get; set; }
+
     }
 }
