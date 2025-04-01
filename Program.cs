@@ -7,6 +7,7 @@ using WebApplication2.Repos.Instructors;
 using Microsoft.EntityFrameworkCore;
 using WebApplication2.Models;
 using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Identity.UI.Services;
 
 namespace WebApplication2
 {
@@ -30,6 +31,8 @@ namespace WebApplication2
             builder.Services.AddScoped<IDeptRepo, DeptRepo>();
             builder.Services.AddScoped<IStudentRepo, StudentRepo>();
             builder.Services.AddScoped<IInsRepo, InsRepo>();
+            builder.Services.AddTransient<IEmailSender, EmailSender>();
+
             var app = builder.Build();
 
             // Configure the HTTP request pipeline.

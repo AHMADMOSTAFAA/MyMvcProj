@@ -6,5 +6,6 @@ namespace WebApplication2.Models
     {
         public string? Address { get; set; } 
         public Student? Student { get; set; }//nav prop
+        public Instructor? Instructor { get; set; }//nav prop
     }
 }

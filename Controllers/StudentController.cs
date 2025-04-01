@@ -26,7 +26,7 @@ namespace WebApplication2.Controllers
         public IActionResult Index()
         {
             var students = IStudentRepo.LoadStdWithCrses();
-            ViewBag.Departments = IDeptRepo.LoadDeparments() ?? new List<Department>(); ;
+            ViewBag.Departments = IDeptRepo.LoadDeparments()  ;//?? new List<Department>();
             return View(students);
         }
 

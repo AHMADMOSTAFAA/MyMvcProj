@@ -74,7 +74,7 @@ namespace WebApplication2.Controllers
                 var selectedCourses = ICourseRepo.SelectedCrsesIDs(courses);
                 ins.Courses = selectedCourses;
                 insRepo.Add(ins);
-                return RedirectToAction("Index");
+                return RedirectToAction("RegisterIns", "Account", new { id = ins.Id });
             }
 
             ViewBag.courses = ICourseRepo.LoadCourses();

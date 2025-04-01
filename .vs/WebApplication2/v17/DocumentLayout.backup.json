@@ -3,28 +3,24 @@
   "WorkspaceRootPath": "C:\\Users\\Asus\\Desktop\\ITI\\MVC\\WebApplication2\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{F6383DA0-9110-4E66-A350-7CB31E65E28F}|WebApplication2.csproj|c:\\users\\asus\\desktop\\iti\\mvc\\webapplication2\\controllers\\studentcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F6383DA0-9110-4E66-A350-7CB31E65E28F}|WebApplication2.csproj|solutionrelative:controllers\\studentcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F6383DA0-9110-4E66-A350-7CB31E65E28F}|WebApplication2.csproj|c:\\users\\asus\\desktop\\iti\\mvc\\webapplication2\\views\\student\\_studentsindepartment.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{F6383DA0-9110-4E66-A350-7CB31E65E28F}|WebApplication2.csproj|solutionrelative:views\\student\\_studentsindepartment.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F6383DA0-9110-4E66-A350-7CB31E65E28F}|WebApplication2.csproj|c:\\users\\asus\\desktop\\iti\\mvc\\webapplication2\\views\\student\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{F6383DA0-9110-4E66-A350-7CB31E65E28F}|WebApplication2.csproj|solutionrelative:views\\student\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F6383DA0-9110-4E66-A350-7CB31E65E28F}|WebApplication2.csproj|c:\\users\\asus\\desktop\\iti\\mvc\\webapplication2\\models\\student.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F6383DA0-9110-4E66-A350-7CB31E65E28F}|WebApplication2.csproj|solutionrelative:models\\student.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{F6383DA0-9110-4E66-A350-7CB31E65E28F}|WebApplication2.csproj|c:\\users\\asus\\desktop\\iti\\mvc\\webapplication2\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{F6383DA0-9110-4E66-A350-7CB31E65E28F}|WebApplication2.csproj|solutionrelative:controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F6383DA0-9110-4E66-A350-7CB31E65E28F}|WebApplication2.csproj|c:\\users\\asus\\desktop\\iti\\mvc\\webapplication2\\viewmodels\\studentdetailsvm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F6383DA0-9110-4E66-A350-7CB31E65E28F}|WebApplication2.csproj|solutionrelative:viewmodels\\studentdetailsvm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{F6383DA0-9110-4E66-A350-7CB31E65E28F}|WebApplication2.csproj|c:\\users\\asus\\desktop\\iti\\mvc\\webapplication2\\repos\\email\\emailsender.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F6383DA0-9110-4E66-A350-7CB31E65E28F}|WebApplication2.csproj|solutionrelative:repos\\email\\emailsender.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F6383DA0-9110-4E66-A350-7CB31E65E28F}|WebApplication2.csproj|c:\\users\\asus\\desktop\\iti\\mvc\\webapplication2\\controllers\\studentcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F6383DA0-9110-4E66-A350-7CB31E65E28F}|WebApplication2.csproj|solutionrelative:controllers\\studentcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F6383DA0-9110-4E66-A350-7CB31E65E28F}|WebApplication2.csproj|c:\\users\\asus\\desktop\\iti\\mvc\\webapplication2\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F6383DA0-9110-4E66-A350-7CB31E65E28F}|WebApplication2.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F6383DA0-9110-4E66-A350-7CB31E65E28F}|WebApplication2.csproj|c:\\users\\asus\\desktop\\iti\\mvc\\webapplication2\\views\\student\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{F6383DA0-9110-4E66-A350-7CB31E65E28F}|WebApplication2.csproj|solutionrelative:views\\student\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     }
   ],
   "DocumentGroupContainers": [
@@ -34,37 +30,63 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\Asus\\Desktop\\ITI\\MVC\\WebApplication2\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "C:\\Users\\Asus\\Desktop\\ITI\\MVC\\WebApplication2\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AgIAACgAAAAAAAAAAAAawCQAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-01T03:02:14.216Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "_StudentsInDepartment.cshtml",
-              "DocumentMoniker": "C:\\Users\\Asus\\Desktop\\ITI\\MVC\\WebApplication2\\Views\\Student\\_StudentsInDepartment.cshtml",
-              "RelativeDocumentMoniker": "Views\\Student\\_StudentsInDepartment.cshtml",
-              "ToolTip": "C:\\Users\\Asus\\Desktop\\ITI\\MVC\\WebApplication2\\Views\\Student\\_StudentsInDepartment.cshtml",
-              "RelativeToolTip": "Views\\Student\\_StudentsInDepartment.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAaAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-03-31T22:37:10.56Z",
+              "Title": "EmailSender.cs",
+              "DocumentMoniker": "C:\\Users\\Asus\\Desktop\\ITI\\MVC\\WebApplication2\\Repos\\Email\\EmailSender.cs",
+              "RelativeDocumentMoniker": "Repos\\Email\\EmailSender.cs",
+              "ToolTip": "C:\\Users\\Asus\\Desktop\\ITI\\MVC\\WebApplication2\\Repos\\Email\\EmailSender.cs",
+              "RelativeToolTip": "Repos\\Email\\EmailSender.cs",
+              "ViewState": "AgIAAAgAAAAAAAAAAAASwAwAAABAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-01T02:43:09.946Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "StudentController.cs",
-              "DocumentMoniker": "C:\\Users\\Asus\\Desktop\\ITI\\MVC\\WebApplication2\\Controllers\\StudentController.cs",
-              "RelativeDocumentMoniker": "Controllers\\StudentController.cs",
-              "ToolTip": "C:\\Users\\Asus\\Desktop\\ITI\\MVC\\WebApplication2\\Controllers\\StudentController.cs",
-              "RelativeToolTip": "Controllers\\StudentController.cs",
-              "ViewState": "AgIAAA4AAAAAAAAAAAAjwBwAAABYAAAAAAAAAA==",
+              "Title": "AccountController.cs",
+              "DocumentMoniker": "C:\\Users\\Asus\\Desktop\\ITI\\MVC\\WebApplication2\\Controllers\\AccountController.cs",
+              "RelativeDocumentMoniker": "Controllers\\AccountController.cs",
+              "ToolTip": "C:\\Users\\Asus\\Desktop\\ITI\\MVC\\WebApplication2\\Controllers\\AccountController.cs",
+              "RelativeToolTip": "Controllers\\AccountController.cs",
+              "ViewState": "AgIAAL0AAAAAAAAAAAAAAMQAAAApAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-31T22:25:27.538Z",
+              "WhenOpened": "2025-03-31T21:47:26.196Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
+              "Title": "StudentController.cs",
+              "DocumentMoniker": "C:\\Users\\Asus\\Desktop\\ITI\\MVC\\WebApplication2\\Controllers\\StudentController.cs",
+              "RelativeDocumentMoniker": "Controllers\\StudentController.cs",
+              "ToolTip": "C:\\Users\\Asus\\Desktop\\ITI\\MVC\\WebApplication2\\Controllers\\StudentController.cs",
+              "RelativeToolTip": "Controllers\\StudentController.cs",
+              "ViewState": "AgIAAEEAAAAAAAAAAAAAwBwAAABBAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-01T00:42:28.704Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
               "Title": "Index.cshtml",
               "DocumentMoniker": "C:\\Users\\Asus\\Desktop\\ITI\\MVC\\WebApplication2\\Views\\Student\\Index.cshtml",
               "RelativeDocumentMoniker": "Views\\Student\\Index.cshtml",
@@ -72,47 +94,7 @@
               "RelativeToolTip": "Views\\Student\\Index.cshtml",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAaAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-03-31T22:26:01.927Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "AccountController.cs",
-              "DocumentMoniker": "C:\\Users\\Asus\\Desktop\\ITI\\MVC\\WebApplication2\\Controllers\\AccountController.cs",
-              "RelativeDocumentMoniker": "Controllers\\AccountController.cs",
-              "ToolTip": "C:\\Users\\Asus\\Desktop\\ITI\\MVC\\WebApplication2\\Controllers\\AccountController.cs",
-              "RelativeToolTip": "Controllers\\AccountController.cs",
-              "ViewState": "AgIAAHIAAAAAAAAAAAAAwEQAAAApAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-31T21:47:26.196Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "StudentDetailsVM.cs",
-              "DocumentMoniker": "C:\\Users\\Asus\\Desktop\\ITI\\MVC\\WebApplication2\\ViewModels\\StudentDetailsVM.cs",
-              "RelativeDocumentMoniker": "ViewModels\\StudentDetailsVM.cs",
-              "ToolTip": "C:\\Users\\Asus\\Desktop\\ITI\\MVC\\WebApplication2\\ViewModels\\StudentDetailsVM.cs",
-              "RelativeToolTip": "ViewModels\\StudentDetailsVM.cs",
-              "ViewState": "AgIAAA4AAAAAAAAAAIA+wBUAAABHAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-31T20:43:08.224Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Student.cs",
-              "DocumentMoniker": "C:\\Users\\Asus\\Desktop\\ITI\\MVC\\WebApplication2\\Models\\Student.cs",
-              "RelativeDocumentMoniker": "Models\\Student.cs",
-              "ToolTip": "C:\\Users\\Asus\\Desktop\\ITI\\MVC\\WebApplication2\\Models\\Student.cs",
-              "RelativeToolTip": "Models\\Student.cs",
-              "ViewState": "AgIAAAkAAAAAAAAAAAAMwBMAAAADAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-31T19:28:15.77Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-31T22:26:01.927Z"
             }
           ]
         }

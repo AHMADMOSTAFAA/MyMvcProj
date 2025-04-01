@@ -41,7 +41,13 @@ namespace WebApplication2.Context
     .HasOne(s => s.User)
     .WithOne(u => u.Student)
     .OnDelete(DeleteBehavior.Cascade);  // Or Restrict
+
+            modelBuilder.Entity<Instructor>()
+    .HasOne(s => s.User)
+    .WithOne(u => u.Instructor)
+    .OnDelete(DeleteBehavior.Cascade);
         }
+
     }
 }
 

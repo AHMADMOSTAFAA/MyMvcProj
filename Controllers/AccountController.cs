@@ -1,10 +1,12 @@
 ﻿using System.Security.Claims;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Identity.UI.Services;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Rewrite;
 using Microsoft.EntityFrameworkCore;
 using WebApplication2.Models;
+using WebApplication2.Repos.Instructors;
 using WebApplication2.Repos.Students;
 using WebApplication2.ViewModels;
 
@@ -16,12 +18,16 @@ namespace WebApplication2.Controllers
         SignInManager<ApplicationUser> _signInManager;
         RoleManager<IdentityRole> _roleManager;
         IStudentRepo _studentRepo;
-        public AccountController(UserManager<ApplicationUser>userManager,SignInManager<ApplicationUser>signInManager,RoleManager<IdentityRole>roleManager,IStudentRepo studentRepo)
+        IInsRepo _insRepo;
+        IEmailSender _emailSender;
+        public AccountController(UserManager<ApplicationUser>userManager,SignInManager<ApplicationUser>signInManager,RoleManager<IdentityRole>roleManager,IStudentRepo studentRepo,IInsRepo insRepo,IEmailSender emailSender)
         {
             _signInManager = signInManager;
             _userManager = userManager;
             _roleManager=roleManager;
             _studentRepo=studentRepo;
+            _insRepo=insRepo;
+            _emailSender=emailSender;
         }
         [HttpGet]
         public async Task <IActionResult> Register()
@@ -71,6 +77,7 @@ namespace WebApplication2.Controllers
                                    _studentRepo.Edit(StdVM);
                                 }
                             }
+                            await SendConfirmationEmail(applicationUser);
                             TempData["Success"] = "User registered and assigned to role!";
                             return RedirectToAction("Login");
 
@@ -108,6 +115,118 @@ namespace WebApplication2.Controllers
         }
 
         [HttpGet]
+        public async Task<IActionResult> RegisterIns()
+        {
+            ViewBag.Roles = await _roleManager.Roles.Select(r => r.Name).ToListAsync();
+            return View();
+        }
+        [HttpPost]
+        public async Task<IActionResult> RegisterIns(RegisterVM registerVM, int?id)
+        {
+            if (ModelState.IsValid)
+            {
+                ApplicationUser applicationUser = new ApplicationUser();
+                applicationUser.UserName = registerVM.UserName;
+                applicationUser.PasswordHash = registerVM.Password;
+                applicationUser.Email = registerVM.Email;
+               
+                applicationUser.Address = registerVM.Address;
+                IdentityResult identityResult = await _userManager.CreateAsync(applicationUser, registerVM.Password);//
+                if (identityResult.Succeeded)
+                {
+                    if (!string.IsNullOrEmpty(registerVM.Role))
+                    {
+                        IdentityResult roleResult = await _userManager.AddToRoleAsync(applicationUser, registerVM.Role);
+                        if (roleResult.Succeeded)
+                        {
+                            if (id.HasValue)
+                            {
+                                var instructor = _insRepo.FindInstructor(id.Value);
+                                if (instructor != null)
+                                {
+                                    instructor.UserId = applicationUser.Id;
+
+                                 
+                                    _insRepo.UpdateInstructor(instructor);
+
+                                }
+                            }
+                            await SendConfirmationEmail(applicationUser);
+                            TempData["Success"] = "User registered and assigned to role!";
+                            return RedirectToAction("Login");
+
+                        }
+                        else
+                        {
+
+                            await _userManager.DeleteAsync(applicationUser);
+                            TempData["ErrorMessage"] = "User registration failed due to role assignment error: " +
+                                string.Join(", ", roleResult.Errors.Select(e => e.Description));
+                        }
+
+                    }
+                    else
+                    {
+
+                        await _userManager.DeleteAsync(applicationUser);
+                        TempData["ErrorMessage"] = "User registration failed: No role selected.";
+                    }
+                }
+                else
+                {
+
+                    TempData["ErrorMessage"] = "User registration failed: " +
+                        string.Join(", ", identityResult.Errors.Select(e => e.Description));
+                }
+            }
+            else
+            {
+                TempData["ErrorMessage"] = "Invalid input. Please try again.";
+            }
+            ViewBag.Roles = await _roleManager.Roles.Select(r => r.Name).ToListAsync();
+
+            return View("Register", registerVM);
+        }
+
+        private async Task SendConfirmationEmail(ApplicationUser applicationUser)
+        {
+            var token = await _userManager.GenerateEmailConfirmationTokenAsync(applicationUser);
+            var confirmationLink=Url.Action("ConfirmEmail","Account", 
+                new { userId = applicationUser.Id, token = token },
+            Request.Scheme);//start the confirm func below pleazzzzz
+            //https is hidden in scheeeme
+            await _emailSender.SendEmailAsync(applicationUser.Email, "Confirm Your Email",
+       $"Please confirm your account by <a href='{confirmationLink}'>clicking here</a>.");
+        }
+
+        public async Task<IActionResult> ConfirmEmail(string userId, string token)
+        {
+            if (userId == null || token == null)
+            {
+                return BadRequest("Invalid email confirmation request.");
+            }
+
+            var user = await _userManager.FindByIdAsync(userId);
+            if (user == null)
+            {
+                return NotFound("User not found.");
+            }
+
+            var result = await _userManager.ConfirmEmailAsync(user, token);
+            if (result.Succeeded)
+            {
+                TempData["Success"] = "Email confirmed successfully!";
+                return RedirectToAction("Login");
+            }
+
+            TempData["Error"] = "Invalid or expired confirmation link.";
+            return RedirectToAction("Error"); 
+        }
+
+
+
+
+        [HttpGet]
         public IActionResult login()
         {
             return View();
@@ -135,10 +254,12 @@ namespace WebApplication2.Controllers
             }
             return View("login",account);
         }
+
         public async Task<IActionResult> SignOut()
         {
             await _signInManager.SignOutAsync();
             return View("login");
         }
+
     }
 }
