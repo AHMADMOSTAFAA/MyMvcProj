@@ -3,42 +3,125 @@
 <form asp-action="@ViewBag.Action" asp-controller="Student" enctype="multipart/form-data">
     @if (ViewBag.Action == "Edit"){
         <input asp-for="Id" class="form-control" hidden />
+        <input asp-for="UserId" class="form-control" hidden />
+        @if (User.IsInRole("HR"))
+        {
+            <div class="mb-3">
+                <label asp-for="Name">Student name</label>
+                <input asp-for="Name" class="form-control">
+            </div>
+            <div class="mb-3">
+                <label asp-for="Email">Student Email</label>
+                <input asp-for="Email" class="form-control">
+            </div>
+
+            <div class="mb-3">
+                <label asp-for="IMGFile"> Upload Student Image</label>
+                <input asp-for="IMGFile" type="file" class="form-control">
+            </div>
+            <div class="mb-3">
+                <label asp-for="Age">Age</label>
+                <input asp-for="Age" class="form-control">
+            </div>
+
+            <div class="mb-3">
+                <label asp-for="DepartmentId" class="form-label">Departments</label>
+                <select asp-for="DepartmentId" class="form-control">
+                    @if (Model.departments != null)
+                    {
+                        @foreach (Department dept in Model.departments)
+                        {
+                            <option value="@dept.Id">@dept.Name</option>
+                        }
+                    }
+                    else
+                    {
+                        <option>No Departments available</option>
+                    }
+                </select>
+
+            </div>
+        }
+        @if (User.IsInRole("Student"))
+        {
+            <div class="mb-3" hidden>
+                <label asp-for="Name">Student name</label>
+                <input asp-for="Name" class="form-control">
+            </div>
+            <div class="mb-3" hidden>
+                <label asp-for="Email">Student Email</label>
+                <input asp-for="Email" class="form-control">
+            </div>
+
+            <div class="mb-3" hidden>
+                <label asp-for="IMGFile"> Upload Student Image</label>
+                <input asp-for="IMGFile" type="file" class="form-control">
+            </div>
+            <div class="mb-3" hidden>
+                <label asp-for="Age">Age</label>
+                <input asp-for="Age" class="form-control">
+            </div>
+
+            <div class="mb-3" hidden>
+                <label asp-for="DepartmentId" class="form-label">Departments</label>
+                <select asp-for="DepartmentId" class="form-control">
+                    @if (Model.departments != null)
+                    {
+                        @foreach (Department dept in Model.departments)
+                        {
+                            <option value="@dept.Id">@dept.Name</option>
+                        }
+                    }
+                    else
+                    {
+                        <option>No Departments available</option>
+                    }
+                </select>
+
+            </div>
+        }
     }
-    <div class="mb-3">
-        <label asp-for="Name">Student name</label>
-        <input asp-for="Name" class="form-control">
-    </div>
-    <div class="mb-3">
-        <label asp-for="Email">Student Email</label>
-        <input asp-for="Email" class="form-control">
-    </div>
+    @if (ViewBag.Action=="Add")
+    {
+        <div class="mb-3">
+            <label asp-for="Name">Student name</label>
+            <input asp-for="Name" class="form-control">
+        </div>
+        <div class="mb-3">
+            <label asp-for="Email">Student Email</label>
+            <input asp-for="Email" class="form-control">
+        </div>
 
-    <div class="mb-3">
-        <label asp-for="IMGFile"> Upload Student Image</label>
-        <input asp-for="IMGFile" type="file" class="form-control">
-    </div>
-    <div class="mb-3">
-        <label asp-for="Age">Age</label>
-        <input asp-for="Age" class="form-control">
-    </div>
+        <div class="mb-3">
+            <label asp-for="IMGFile"> Upload Student Image</label>
+            <input asp-for="IMGFile" type="file" class="form-control">
+        </div>
+        <div class="mb-3">
+            <label asp-for="Age">Age</label>
+            <input asp-for="Age" class="form-control">
+        </div>
 
-    <div class="mb-3">
-        <label asp-for="DepartmentId" class="form-label">Departments</label>
-        <select asp-for="DepartmentId" class="form-control">
-            @if (Model.departments != null)
-            {
-                @foreach (Department dept in Model.departments)
+        <div class="mb-3">
+            <label asp-for="DepartmentId" class="form-label">Departments</label>
+            <select asp-for="DepartmentId" class="form-control">
+                @if (Model.departments != null)
                 {
-                    <option value="@dept.Id">@dept.Name</option>
+                    @foreach (Department dept in Model.departments)
+                    {
+                        <option value="@dept.Id">@dept.Name</option>
+                    }
                 }
-            }
-            else
-            {
-                <option>No Departments available</option>
-            }
-        </select>
+                else
+                {
+                    <option>No Departments available</option>
+                }
+            </select>
 
-    </div>
+        </div>
+    }
+        
+    
+  
     @if (ViewBag.Action == "Edit"){
         <select asp-for="SelectedCrsIDs" class="form-control" multiple>
 

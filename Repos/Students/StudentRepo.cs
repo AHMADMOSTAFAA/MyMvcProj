@@ -67,6 +67,7 @@ namespace WebApplication2.Repos.Students
             updatedstd.Age = stdvm.Age;
             updatedstd.DepartmentId = stdvm.DepartmentId;
             updatedstd.Email = stdvm.Email;
+            updatedstd.UserId = stdvm.UserId;
 
             if (stdvm.IMGFile != null)
             {
@@ -81,12 +82,21 @@ namespace WebApplication2.Repos.Students
                 updatedstd.IMG = "/Images/" + fileName;
             }
 
-            updatedstd.Course_Stds = stdvm.SelectedCrsIDs
-                .Select(courseId => new Course_Stds { StudentId = updatedstd.Id, CourseId = courseId })
-                .ToList();
+            if (stdvm.SelectedCrsIDs != null)
+            {
+                updatedstd.Course_Stds = stdvm.SelectedCrsIDs
+                    .Select(courseId => new Course_Stds { StudentId = updatedstd.Id, CourseId = courseId })
+                    .ToList();
+            }
 
             ITI.SaveChanges();
         }
+        public Student LastStudent()
+        {
+            var lastStudent = ITI.Students.OrderBy(s => s.Id).LastOrDefault();
+            return lastStudent;
+        }
+
         public void Delete(Student student)
         {
             ITI.Students.Remove(student);

@@ -23,8 +23,9 @@ namespace WebApplication2.Repos.Students
         public void Edit(StudentDetailsVM student);
 
         public void Delete(Student student);
-       
 
-    
+        public Student LastStudent();
+
+
 }
 }

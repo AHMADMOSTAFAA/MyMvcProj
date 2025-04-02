@@ -8,6 +8,7 @@ using WebApplication2.Repos.Students;
 using WebApplication2.Repos.Departments;
 using WebApplication2.Repos.Courses;
 using Microsoft.AspNetCore.Authorization;
+using Microsoft.VisualStudio.Web.CodeGenerators.Mvc.Templates.BlazorIdentity.Pages.Manage;
 
 namespace WebApplication2.Controllers
 {
@@ -22,7 +23,7 @@ namespace WebApplication2.Controllers
             IDeptRepo = deptRepo;
             ICourseRepo = _ICourseRepo;
         }
-        [Authorize(Roles ="Admin")]
+        [Authorize(Roles = "Admin,HR")]
         public IActionResult Index()
         {
             var students = IStudentRepo.LoadStdWithCrses();
@@ -35,7 +36,7 @@ namespace WebApplication2.Controllers
             var students = IStudentRepo.LoadStdWithCrsesByDeptId(id);
             return PartialView("_StudentsInDepartment", students);
         }
-
+        [Authorize(Roles = "Student")]
         public IActionResult DetailsVM(int id)
         {
             var student = IStudentRepo.LoadStdWithHisCourse(id);
@@ -73,7 +74,8 @@ namespace WebApplication2.Controllers
             if (ModelState.IsValid)
             {
                IStudentRepo.Add(stdvm);
-                return RedirectToAction("Register", "Account", new {studentId=stdvm.Id});
+                var laststd=IStudentRepo.LastStudent();
+                return RedirectToAction("Register", "Account", new { id = laststd.Id });
             }
 
             stdvm.departments = IDeptRepo.LoadDeparments();
@@ -81,6 +83,9 @@ namespace WebApplication2.Controllers
         }
 
         [HttpGet]
+       
+        [Authorize(Roles = "HR,Student")]
+
         public IActionResult Edit(int id)
         {
             var student =IStudentRepo.Student(id);
@@ -98,26 +103,34 @@ namespace WebApplication2.Controllers
                 DepartmentId = student.DepartmentId,
                 departments = IDeptRepo.LoadDeparments(),
                 courses =ICourseRepo.LoadCourses(),
-                SelectedCrsIDs = student.Course_Stds.Select(cs => cs.CourseId).ToList()
+                SelectedCrsIDs = student.Course_Stds.Select(cs => cs.CourseId).ToList(),
+                UserId = student.UserId,
             };
 
             return View(studentDetailsVM);
         }
 
         [HttpPost]
+        [Authorize(Roles = "HR,Student")]
+
         public IActionResult Edit(StudentDetailsVM stdvm)
         {
             if (ModelState.IsValid)
             {
                 IStudentRepo.Edit(stdvm);
+                if(User.IsInRole("HR"))
                 return RedirectToAction("Index");
+                if (User.IsInRole("Student"))
+                    return RedirectToAction("DetailsVM","Student", new { id = stdvm.Id });
             }
 
             stdvm.departments = IDeptRepo.LoadDeparments();
             stdvm.courses = ICourseRepo.LoadCourses();
             return View(stdvm);
         }
-        [Authorize(Roles = "Admin")]
+
+      
+        //[Authorize(Roles = "HR")]
         public IActionResult Delete(int id)
         {
             var selectedstd = IStudentRepo.Student(id);

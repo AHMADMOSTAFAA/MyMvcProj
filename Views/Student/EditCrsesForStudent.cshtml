@@ -1,0 +1,76 @@
+﻿@model StudentDetailsVM
+
+<form asp-action="EditCrsesForStudent" asp-controller="Student" enctype="multipart/form-data">
+    @if (ViewBag.Action == "Edit")
+    {
+        <input asp-for="Id" class="form-control" hidden />
+    }
+    @if (ViewBag.Action == "Edit")
+    {
+        <input asp-for="UserId" class="form-control" hidden />
+    }
+    <div class="mb-3" hidden>
+        <label asp-for="Name">Student name</label>
+        <input asp-for="Name" class="form-control">
+    </div>
+    <div class="mb-3" hidden>
+        <label asp-for="Email">Student Email</label>
+        <input asp-for="Email" class="form-control">
+    </div>
+
+    <div class="mb-3" hidden>
+        <label asp-for="IMGFile"> Upload Student Image</label>
+        <input asp-for="IMGFile" type="file" class="form-control">
+    </div>
+    <div class="mb-3" hidden>
+        <label asp-for="Age">Age</label>
+        <input asp-for="Age" class="form-control">
+    </div>
+    <div class="mb-3"hidden>
+        <label asp-for="DepartmentId" class="form-label">Departments</label>
+        <select asp-for="DepartmentId" class="form-control">
+            @if (Model.departments != null)
+            {
+                @foreach (Department dept in Model.departments)
+                {
+                    <option value="@dept.Id">@dept.Name</option>
+                }
+            }
+            else
+            {
+                <option>No Departments available</option>
+            }
+        </select>
+
+    </div>
+
+    <select asp-for="SelectedCrsIDs" class="form-control" multiple>
+
+
+
+        @if (Model.courses!=null)
+        {
+            @foreach (Course crs in Model.courses)
+            {
+
+                @if (Model.SelectedCrsIDs.Contains(crs.Id))
+                {
+                    <option value="@crs.Id" selected>@crs.Name</option>
+                }
+                else
+                {
+                    <option value="@crs.Id">@crs.Name</option>
+                }
+
+
+            }
+        }
+        else
+        {
+            <option >No courses yet</option>
+        }
+    </select>
+    
+    <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+

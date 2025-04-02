@@ -13,6 +13,7 @@ namespace WebApplication2.ViewModels
         public List<string>? coursenames { get; set; }
         // Foreign Key
         public int? DepartmentId { get; set; }
+        public string? UserId { get; set; } 
         public List<Course_Stds> Course_Stds { get; set; } = new List<Course_Stds>();
         public List<Department>? departments { get; set; }
         public List<int>? SelectedCrsIDs { get; set; }

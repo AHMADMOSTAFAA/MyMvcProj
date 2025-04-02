@@ -14,18 +14,7 @@
 <ul class="list-group">
     @for (int i = 0; i < Model.Course_Stds.Count; i++)
     {
-        if (Model.Course_Stds[i].Degree > 90)
-        {
-            Model.color = "green";
-        }
-        else if (Model.Course_Stds[i].Degree >= 70)
-        {
-            Model.color = "yellow";
-        }
-        else if (Model.Course_Stds[i].Degree > 50)
-        {
-            Model.color = "red";
-        }
+       
       
 
         <li class="list-group-item disabled bg-info" style="color:@Model.color" aria-disabled="true">
@@ -34,3 +23,9 @@
     }
 
 </ul>
+<div>
+    <a asp-controller="Student" asp-action="Edit" asp-route-id="@Model.Id" class="btn btn-success m-2">
+        Edit
+    </a>
+
+</div>

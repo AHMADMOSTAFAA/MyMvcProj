@@ -1,5 +1,6 @@
 ﻿using System.Security.Claims;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.UI.Services;
 using Microsoft.AspNetCore.Mvc;
@@ -30,12 +31,14 @@ namespace WebApplication2.Controllers
             _emailSender=emailSender;
         }
         [HttpGet]
+        [Authorize(Roles ="Admin")]
         public async Task <IActionResult> Register()
         {
             ViewBag.Roles = await _roleManager.Roles.Select(r => r.Name).ToListAsync();
             return View();
         }
         [HttpPost]
+        [Authorize(Roles = "Admin")]
         public async Task<IActionResult> Register(RegisterVM registerVM,int?id)
         {
             if (ModelState.IsValid) { 
@@ -72,6 +75,7 @@ namespace WebApplication2.Controllers
                                          Email = student.Email,
                                          Age = student.Age,
                                          IMG=student.IMG,
+                                         UserId = applicationUser.Id,
                                          
                                      };
                                    _studentRepo.Edit(StdVM);
@@ -115,12 +119,14 @@ namespace WebApplication2.Controllers
         }
 
         [HttpGet]
+        [Authorize(Roles = "Admin")]
         public async Task<IActionResult> RegisterIns()
         {
             ViewBag.Roles = await _roleManager.Roles.Select(r => r.Name).ToListAsync();
             return View();
         }
         [HttpPost]
+        [Authorize(Roles = "Admin")]
         public async Task<IActionResult> RegisterIns(RegisterVM registerVM, int?id)
         {
             if (ModelState.IsValid)
@@ -237,23 +243,42 @@ namespace WebApplication2.Controllers
         {
             if (ModelState.IsValid)
             {
-                ApplicationUser applicationUser=await _userManager.FindByNameAsync(account.UserName);
-                if (applicationUser != null) { 
-                bool CheckPassword=await _userManager.CheckPasswordAsync(applicationUser, account.Password);
-                    if (CheckPassword) { 
-                    List<Claim>claims = new List<Claim>();
-                        claims.Add(new Claim("UserAddress",applicationUser.Address));
+                // Use Include() to eagerly load the Student navigation property
+                ApplicationUser applicationUser = await _userManager.Users
+                    .Include(u => u.Student).Include(u=>u.Instructor)// Ensure Student is loaded
+                    .FirstOrDefaultAsync(u => u.UserName == account.UserName);
 
-                        await _signInManager.SignInWithClaimsAsync(applicationUser, account.RememberMe,claims);
-                        TempData["Success"] = "Welcome back, " + applicationUser.UserName + "!";
-                        return RedirectToAction("index", "Student");
+                if (applicationUser != null)
+                {
+                    bool CheckPassword = await _userManager.CheckPasswordAsync(applicationUser, account.Password);
+                    if (CheckPassword)
+                    {
+                        List<Claim> claims = new List<Claim>
+                {
+                    new Claim("UserAddress", applicationUser.Address)
+                };
+
+                        await _signInManager.SignInWithClaimsAsync(applicationUser, account.RememberMe, claims);
+
+                        if (await _userManager.IsInRoleAsync(applicationUser, "Admin"))
+                            return RedirectToAction("Index", "Admin");
+                        else if (await _userManager.IsInRoleAsync(applicationUser, "HR"))
+                            return RedirectToAction("Index", "Instructor");
+                        else if (await _userManager.IsInRoleAsync(applicationUser, "Instructor"))
+                            return RedirectToAction("Index", "Course");
+                        else if (await _userManager.IsInRoleAsync(applicationUser, "Student"))
+                            return RedirectToAction("DetailsVM", "Student", new { id = applicationUser.Student.Id });
+
                     }
                 }
-                ModelState.AddModelError("", "username or password Invalid");
+
+                ModelState.AddModelError("", "Username or password is invalid");
                 TempData["ErrorMessage"] = "Login failed: Invalid username or password.";
             }
-            return View("login",account);
+
+            return View("login", account);
         }
+
 
         public async Task<IActionResult> SignOut()
         {

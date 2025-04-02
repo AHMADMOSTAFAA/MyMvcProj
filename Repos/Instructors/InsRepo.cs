@@ -15,7 +15,7 @@ namespace WebApplication2.Repos.Instructors
         }
         public List<Instructor> LoadInstructors()
         {
-            var instructors=ITI.Instructors.ToList();
+            var instructors=ITI.Instructors.Include(i=>i.Courses).ToList();
             
             return instructors;
         }

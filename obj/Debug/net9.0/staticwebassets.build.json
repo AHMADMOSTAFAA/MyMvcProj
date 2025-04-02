@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "pT6owKWaDaG0KdHE9PmlHbTnDcUlS9JPPvF8CJNRWg8=",
+  "Hash": "ls+h7Hu6dBK8YWMtGINKKlTjC6Sb1a4zEFy9YRSyXYA=",
   "Source": "WebApplication2",
   "BasePath": "_content/WebApplication2",
   "Mode": "Default",
@@ -1718,6 +1718,48 @@
       "OriginalItemSpec": "wwwroot\\favicon.ico"
     },
     {
+      "Identity": "C:\\Users\\Asus\\Desktop\\ITI\\MVC\\WebApplication2\\wwwroot\\Images\\088826a1-a7d2-4f61-b20b-e993dcad6741.jpg",
+      "SourceId": "WebApplication2",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Asus\\Desktop\\ITI\\MVC\\WebApplication2\\wwwroot\\",
+      "BasePath": "_content/WebApplication2",
+      "RelativePath": "Images/088826a1-a7d2-4f61-b20b-e993dcad6741#[.{fingerprint}]?.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "byub1j7sg0",
+      "Integrity": "c64kpVQOdtFKXNPGZHTOO1w1ccXPxpmnpIgAL3vdg38=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Images\\088826a1-a7d2-4f61-b20b-e993dcad6741.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\Asus\\Desktop\\ITI\\MVC\\WebApplication2\\wwwroot\\Images\\70f708f1-20a5-47c3-a011-87186485698b.jpg",
+      "SourceId": "WebApplication2",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Asus\\Desktop\\ITI\\MVC\\WebApplication2\\wwwroot\\",
+      "BasePath": "_content/WebApplication2",
+      "RelativePath": "Images/70f708f1-20a5-47c3-a011-87186485698b#[.{fingerprint}]?.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "byub1j7sg0",
+      "Integrity": "c64kpVQOdtFKXNPGZHTOO1w1ccXPxpmnpIgAL3vdg38=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Images\\70f708f1-20a5-47c3-a011-87186485698b.jpg"
+    },
+    {
       "Identity": "C:\\Users\\Asus\\Desktop\\ITI\\MVC\\WebApplication2\\wwwroot\\Images\\7aea2ec3-6622-4382-a19f-f7bb86c3e6a9.jpg",
       "SourceId": "WebApplication2",
       "SourceType": "Discovered",
@@ -1739,6 +1781,27 @@
       "OriginalItemSpec": "wwwroot\\Images\\7aea2ec3-6622-4382-a19f-f7bb86c3e6a9.jpg"
     },
     {
+      "Identity": "C:\\Users\\Asus\\Desktop\\ITI\\MVC\\WebApplication2\\wwwroot\\Images\\866e6691-49ca-42f8-a011-4acc961ca698.jpg",
+      "SourceId": "WebApplication2",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Asus\\Desktop\\ITI\\MVC\\WebApplication2\\wwwroot\\",
+      "BasePath": "_content/WebApplication2",
+      "RelativePath": "Images/866e6691-49ca-42f8-a011-4acc961ca698#[.{fingerprint}]?.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "byub1j7sg0",
+      "Integrity": "c64kpVQOdtFKXNPGZHTOO1w1ccXPxpmnpIgAL3vdg38=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Images\\866e6691-49ca-42f8-a011-4acc961ca698.jpg"
+    },
+    {
       "Identity": "C:\\Users\\Asus\\Desktop\\ITI\\MVC\\WebApplication2\\wwwroot\\Images\\93a74f67-b23e-44ad-bb79-566e15800a85.jpg",
       "SourceId": "WebApplication2",
       "SourceType": "Discovered",
@@ -1758,6 +1821,27 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\Images\\93a74f67-b23e-44ad-bb79-566e15800a85.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\Asus\\Desktop\\ITI\\MVC\\WebApplication2\\wwwroot\\Images\\a85b5236-1df3-4b07-b7bf-59b185941f23.jpg",
+      "SourceId": "WebApplication2",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Asus\\Desktop\\ITI\\MVC\\WebApplication2\\wwwroot\\",
+      "BasePath": "_content/WebApplication2",
+      "RelativePath": "Images/a85b5236-1df3-4b07-b7bf-59b185941f23#[.{fingerprint}]?.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "byub1j7sg0",
+      "Integrity": "c64kpVQOdtFKXNPGZHTOO1w1ccXPxpmnpIgAL3vdg38=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Images\\a85b5236-1df3-4b07-b7bf-59b185941f23.jpg"
     },
     {
       "Identity": "C:\\Users\\Asus\\Desktop\\ITI\\MVC\\WebApplication2\\wwwroot\\Images\\Admin.png",
@@ -1844,6 +1928,27 @@
       "OriginalItemSpec": "wwwroot\\Images\\c6a5b30c-a3d4-43ac-b5da-ab61a248edf6.png"
     },
     {
+      "Identity": "C:\\Users\\Asus\\Desktop\\ITI\\MVC\\WebApplication2\\wwwroot\\Images\\d96b78fe-c195-4045-9890-5a32f0b38ab4.jpg",
+      "SourceId": "WebApplication2",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Asus\\Desktop\\ITI\\MVC\\WebApplication2\\wwwroot\\",
+      "BasePath": "_content/WebApplication2",
+      "RelativePath": "Images/d96b78fe-c195-4045-9890-5a32f0b38ab4#[.{fingerprint}]?.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "byub1j7sg0",
+      "Integrity": "c64kpVQOdtFKXNPGZHTOO1w1ccXPxpmnpIgAL3vdg38=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Images\\d96b78fe-c195-4045-9890-5a32f0b38ab4.jpg"
+    },
+    {
       "Identity": "C:\\Users\\Asus\\Desktop\\ITI\\MVC\\WebApplication2\\wwwroot\\Images\\da89485a-6ae5-4c91-83d7-07205df2972e.png",
       "SourceId": "WebApplication2",
       "SourceType": "Discovered",
@@ -1905,6 +2010,48 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\Images\\error-404-monochrome.svg"
+    },
+    {
+      "Identity": "C:\\Users\\Asus\\Desktop\\ITI\\MVC\\WebApplication2\\wwwroot\\Images\\f28900a3-4895-4e72-83bb-9d00ab75c49e.jpg",
+      "SourceId": "WebApplication2",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Asus\\Desktop\\ITI\\MVC\\WebApplication2\\wwwroot\\",
+      "BasePath": "_content/WebApplication2",
+      "RelativePath": "Images/f28900a3-4895-4e72-83bb-9d00ab75c49e#[.{fingerprint}]?.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "byub1j7sg0",
+      "Integrity": "c64kpVQOdtFKXNPGZHTOO1w1ccXPxpmnpIgAL3vdg38=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Images\\f28900a3-4895-4e72-83bb-9d00ab75c49e.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\Asus\\Desktop\\ITI\\MVC\\WebApplication2\\wwwroot\\Images\\f4ded387-69f1-4a0f-94f6-dfa1a9b8add7.jpg",
+      "SourceId": "WebApplication2",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Asus\\Desktop\\ITI\\MVC\\WebApplication2\\wwwroot\\",
+      "BasePath": "_content/WebApplication2",
+      "RelativePath": "Images/f4ded387-69f1-4a0f-94f6-dfa1a9b8add7#[.{fingerprint}]?.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "byub1j7sg0",
+      "Integrity": "c64kpVQOdtFKXNPGZHTOO1w1ccXPxpmnpIgAL3vdg38=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Images\\f4ded387-69f1-4a0f-94f6-dfa1a9b8add7.jpg"
     },
     {
       "Identity": "C:\\Users\\Asus\\Desktop\\ITI\\MVC\\WebApplication2\\wwwroot\\Images\\plus.png",
@@ -5360,6 +5507,170 @@
       ]
     },
     {
+      "Route": "Images/088826a1-a7d2-4f61-b20b-e993dcad6741.byub1j7sg0.jpg",
+      "AssetFile": "C:\\Users\\Asus\\Desktop\\ITI\\MVC\\WebApplication2\\wwwroot\\Images\\088826a1-a7d2-4f61-b20b-e993dcad6741.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "35654"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"c64kpVQOdtFKXNPGZHTOO1w1ccXPxpmnpIgAL3vdg38=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 01 Apr 2025 20:40:36 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "byub1j7sg0"
+        },
+        {
+          "Name": "label",
+          "Value": "Images/088826a1-a7d2-4f61-b20b-e993dcad6741.jpg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-c64kpVQOdtFKXNPGZHTOO1w1ccXPxpmnpIgAL3vdg38="
+        }
+      ]
+    },
+    {
+      "Route": "Images/088826a1-a7d2-4f61-b20b-e993dcad6741.jpg",
+      "AssetFile": "C:\\Users\\Asus\\Desktop\\ITI\\MVC\\WebApplication2\\wwwroot\\Images\\088826a1-a7d2-4f61-b20b-e993dcad6741.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "35654"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"c64kpVQOdtFKXNPGZHTOO1w1ccXPxpmnpIgAL3vdg38=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 01 Apr 2025 20:40:36 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-c64kpVQOdtFKXNPGZHTOO1w1ccXPxpmnpIgAL3vdg38="
+        }
+      ]
+    },
+    {
+      "Route": "Images/70f708f1-20a5-47c3-a011-87186485698b.byub1j7sg0.jpg",
+      "AssetFile": "C:\\Users\\Asus\\Desktop\\ITI\\MVC\\WebApplication2\\wwwroot\\Images\\70f708f1-20a5-47c3-a011-87186485698b.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "35654"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"c64kpVQOdtFKXNPGZHTOO1w1ccXPxpmnpIgAL3vdg38=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 01 Apr 2025 21:01:34 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "byub1j7sg0"
+        },
+        {
+          "Name": "label",
+          "Value": "Images/70f708f1-20a5-47c3-a011-87186485698b.jpg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-c64kpVQOdtFKXNPGZHTOO1w1ccXPxpmnpIgAL3vdg38="
+        }
+      ]
+    },
+    {
+      "Route": "Images/70f708f1-20a5-47c3-a011-87186485698b.jpg",
+      "AssetFile": "C:\\Users\\Asus\\Desktop\\ITI\\MVC\\WebApplication2\\wwwroot\\Images\\70f708f1-20a5-47c3-a011-87186485698b.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "35654"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"c64kpVQOdtFKXNPGZHTOO1w1ccXPxpmnpIgAL3vdg38=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 01 Apr 2025 21:01:34 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-c64kpVQOdtFKXNPGZHTOO1w1ccXPxpmnpIgAL3vdg38="
+        }
+      ]
+    },
+    {
       "Route": "Images/7aea2ec3-6622-4382-a19f-f7bb86c3e6a9.byub1j7sg0.jpg",
       "AssetFile": "C:\\Users\\Asus\\Desktop\\ITI\\MVC\\WebApplication2\\wwwroot\\Images\\7aea2ec3-6622-4382-a19f-f7bb86c3e6a9.jpg",
       "Selectors": [],
@@ -5442,6 +5753,88 @@
       ]
     },
     {
+      "Route": "Images/866e6691-49ca-42f8-a011-4acc961ca698.byub1j7sg0.jpg",
+      "AssetFile": "C:\\Users\\Asus\\Desktop\\ITI\\MVC\\WebApplication2\\wwwroot\\Images\\866e6691-49ca-42f8-a011-4acc961ca698.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "35654"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"c64kpVQOdtFKXNPGZHTOO1w1ccXPxpmnpIgAL3vdg38=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 02 Apr 2025 01:18:39 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "byub1j7sg0"
+        },
+        {
+          "Name": "label",
+          "Value": "Images/866e6691-49ca-42f8-a011-4acc961ca698.jpg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-c64kpVQOdtFKXNPGZHTOO1w1ccXPxpmnpIgAL3vdg38="
+        }
+      ]
+    },
+    {
+      "Route": "Images/866e6691-49ca-42f8-a011-4acc961ca698.jpg",
+      "AssetFile": "C:\\Users\\Asus\\Desktop\\ITI\\MVC\\WebApplication2\\wwwroot\\Images\\866e6691-49ca-42f8-a011-4acc961ca698.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "35654"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"c64kpVQOdtFKXNPGZHTOO1w1ccXPxpmnpIgAL3vdg38=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 02 Apr 2025 01:18:39 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-c64kpVQOdtFKXNPGZHTOO1w1ccXPxpmnpIgAL3vdg38="
+        }
+      ]
+    },
+    {
       "Route": "Images/93a74f67-b23e-44ad-bb79-566e15800a85.byub1j7sg0.jpg",
       "AssetFile": "C:\\Users\\Asus\\Desktop\\ITI\\MVC\\WebApplication2\\wwwroot\\Images\\93a74f67-b23e-44ad-bb79-566e15800a85.jpg",
       "Selectors": [],
@@ -5510,6 +5903,88 @@
         {
           "Name": "Last-Modified",
           "Value": "Tue, 01 Apr 2025 03:22:35 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-c64kpVQOdtFKXNPGZHTOO1w1ccXPxpmnpIgAL3vdg38="
+        }
+      ]
+    },
+    {
+      "Route": "Images/a85b5236-1df3-4b07-b7bf-59b185941f23.byub1j7sg0.jpg",
+      "AssetFile": "C:\\Users\\Asus\\Desktop\\ITI\\MVC\\WebApplication2\\wwwroot\\Images\\a85b5236-1df3-4b07-b7bf-59b185941f23.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "35654"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"c64kpVQOdtFKXNPGZHTOO1w1ccXPxpmnpIgAL3vdg38=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 02 Apr 2025 01:35:16 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "byub1j7sg0"
+        },
+        {
+          "Name": "label",
+          "Value": "Images/a85b5236-1df3-4b07-b7bf-59b185941f23.jpg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-c64kpVQOdtFKXNPGZHTOO1w1ccXPxpmnpIgAL3vdg38="
+        }
+      ]
+    },
+    {
+      "Route": "Images/a85b5236-1df3-4b07-b7bf-59b185941f23.jpg",
+      "AssetFile": "C:\\Users\\Asus\\Desktop\\ITI\\MVC\\WebApplication2\\wwwroot\\Images\\a85b5236-1df3-4b07-b7bf-59b185941f23.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "35654"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"c64kpVQOdtFKXNPGZHTOO1w1ccXPxpmnpIgAL3vdg38=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 02 Apr 2025 01:35:16 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -5848,6 +6323,88 @@
         {
           "Name": "integrity",
           "Value": "sha256-cBU/XEvR7j9GFv98ybcuZtcWk2z6aAmbJxUB96JwyTY="
+        }
+      ]
+    },
+    {
+      "Route": "Images/d96b78fe-c195-4045-9890-5a32f0b38ab4.byub1j7sg0.jpg",
+      "AssetFile": "C:\\Users\\Asus\\Desktop\\ITI\\MVC\\WebApplication2\\wwwroot\\Images\\d96b78fe-c195-4045-9890-5a32f0b38ab4.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "35654"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"c64kpVQOdtFKXNPGZHTOO1w1ccXPxpmnpIgAL3vdg38=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 01 Apr 2025 20:52:40 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "byub1j7sg0"
+        },
+        {
+          "Name": "label",
+          "Value": "Images/d96b78fe-c195-4045-9890-5a32f0b38ab4.jpg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-c64kpVQOdtFKXNPGZHTOO1w1ccXPxpmnpIgAL3vdg38="
+        }
+      ]
+    },
+    {
+      "Route": "Images/d96b78fe-c195-4045-9890-5a32f0b38ab4.jpg",
+      "AssetFile": "C:\\Users\\Asus\\Desktop\\ITI\\MVC\\WebApplication2\\wwwroot\\Images\\d96b78fe-c195-4045-9890-5a32f0b38ab4.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "35654"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"c64kpVQOdtFKXNPGZHTOO1w1ccXPxpmnpIgAL3vdg38=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 01 Apr 2025 20:52:40 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-c64kpVQOdtFKXNPGZHTOO1w1ccXPxpmnpIgAL3vdg38="
         }
       ]
     },
@@ -6310,6 +6867,170 @@
         {
           "Name": "integrity",
           "Value": "sha256-JkSdjk2mn0VMJNfhiOCLZJhy57j3Lkw2Lcfhc10G/JM="
+        }
+      ]
+    },
+    {
+      "Route": "Images/f28900a3-4895-4e72-83bb-9d00ab75c49e.byub1j7sg0.jpg",
+      "AssetFile": "C:\\Users\\Asus\\Desktop\\ITI\\MVC\\WebApplication2\\wwwroot\\Images\\f28900a3-4895-4e72-83bb-9d00ab75c49e.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "35654"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"c64kpVQOdtFKXNPGZHTOO1w1ccXPxpmnpIgAL3vdg38=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 01 Apr 2025 20:06:20 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "byub1j7sg0"
+        },
+        {
+          "Name": "label",
+          "Value": "Images/f28900a3-4895-4e72-83bb-9d00ab75c49e.jpg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-c64kpVQOdtFKXNPGZHTOO1w1ccXPxpmnpIgAL3vdg38="
+        }
+      ]
+    },
+    {
+      "Route": "Images/f28900a3-4895-4e72-83bb-9d00ab75c49e.jpg",
+      "AssetFile": "C:\\Users\\Asus\\Desktop\\ITI\\MVC\\WebApplication2\\wwwroot\\Images\\f28900a3-4895-4e72-83bb-9d00ab75c49e.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "35654"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"c64kpVQOdtFKXNPGZHTOO1w1ccXPxpmnpIgAL3vdg38=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 01 Apr 2025 20:06:20 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-c64kpVQOdtFKXNPGZHTOO1w1ccXPxpmnpIgAL3vdg38="
+        }
+      ]
+    },
+    {
+      "Route": "Images/f4ded387-69f1-4a0f-94f6-dfa1a9b8add7.byub1j7sg0.jpg",
+      "AssetFile": "C:\\Users\\Asus\\Desktop\\ITI\\MVC\\WebApplication2\\wwwroot\\Images\\f4ded387-69f1-4a0f-94f6-dfa1a9b8add7.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "35654"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"c64kpVQOdtFKXNPGZHTOO1w1ccXPxpmnpIgAL3vdg38=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 02 Apr 2025 01:33:56 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "byub1j7sg0"
+        },
+        {
+          "Name": "label",
+          "Value": "Images/f4ded387-69f1-4a0f-94f6-dfa1a9b8add7.jpg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-c64kpVQOdtFKXNPGZHTOO1w1ccXPxpmnpIgAL3vdg38="
+        }
+      ]
+    },
+    {
+      "Route": "Images/f4ded387-69f1-4a0f-94f6-dfa1a9b8add7.jpg",
+      "AssetFile": "C:\\Users\\Asus\\Desktop\\ITI\\MVC\\WebApplication2\\wwwroot\\Images\\f4ded387-69f1-4a0f-94f6-dfa1a9b8add7.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "35654"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"c64kpVQOdtFKXNPGZHTOO1w1ccXPxpmnpIgAL3vdg38=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 02 Apr 2025 01:33:56 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-c64kpVQOdtFKXNPGZHTOO1w1ccXPxpmnpIgAL3vdg38="
         }
       ]
     },
@@ -25060,7 +25781,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Tue, 01 Apr 2025 00:21:01 GMT"
+          "Value": "Wed, 02 Apr 2025 01:38:52 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -25113,7 +25834,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Tue, 01 Apr 2025 00:21:01 GMT"
+          "Value": "Wed, 02 Apr 2025 01:38:52 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -25150,7 +25871,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Tue, 01 Apr 2025 00:21:01 GMT"
+          "Value": "Wed, 02 Apr 2025 01:38:52 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -25197,7 +25918,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Tue, 01 Apr 2025 00:21:01 GMT"
+          "Value": "Wed, 02 Apr 2025 01:38:52 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -25258,7 +25979,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Tue, 01 Apr 2025 00:21:01 GMT"
+          "Value": "Wed, 02 Apr 2025 01:38:52 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -25303,7 +26024,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Tue, 01 Apr 2025 00:21:01 GMT"
+          "Value": "Wed, 02 Apr 2025 01:38:52 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -25358,7 +26079,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Tue, 01 Apr 2025 00:21:01 GMT"
+          "Value": "Wed, 02 Apr 2025 01:38:52 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -25419,7 +26140,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Tue, 01 Apr 2025 00:21:01 GMT"
+          "Value": "Wed, 02 Apr 2025 01:38:52 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -25464,7 +26185,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Tue, 01 Apr 2025 00:21:01 GMT"
+          "Value": "Wed, 02 Apr 2025 01:38:52 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -25519,7 +26240,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Tue, 01 Apr 2025 00:21:01 GMT"
+          "Value": "Wed, 02 Apr 2025 01:38:52 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -25572,7 +26293,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Tue, 01 Apr 2025 00:21:01 GMT"
+          "Value": "Wed, 02 Apr 2025 01:38:52 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -25609,7 +26330,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Tue, 01 Apr 2025 00:21:01 GMT"
+          "Value": "Wed, 02 Apr 2025 01:38:52 GMT"
         },
         {
           "Name": "Cache-Control",
