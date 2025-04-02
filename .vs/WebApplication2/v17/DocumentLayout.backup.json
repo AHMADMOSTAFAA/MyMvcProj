@@ -7,26 +7,24 @@
       "RelativeMoniker": "D:0:0:{F6383DA0-9110-4E66-A350-7CB31E65E28F}|WebApplication2.csproj|solutionrelative:views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F6383DA0-9110-4E66-A350-7CB31E65E28F}|WebApplication2.csproj|c:\\users\\asus\\desktop\\iti\\mvc\\webapplication2\\controllers\\studentcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F6383DA0-9110-4E66-A350-7CB31E65E28F}|WebApplication2.csproj|solutionrelative:controllers\\studentcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{F6383DA0-9110-4E66-A350-7CB31E65E28F}|WebApplication2.csproj|c:\\users\\asus\\desktop\\iti\\mvc\\webapplication2\\views\\admin\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{F6383DA0-9110-4E66-A350-7CB31E65E28F}|WebApplication2.csproj|solutionrelative:views\\admin\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|ViewDataWindow_MSSQL__/./ITIProj/True/SqlTable/dbo.Course_Stds.sql||{0058A1F7-65F3-4DB9-B3D0-CA7E64DD73CD}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|ViewDataWindow_MSSQL__/./ITIProj/True/SqlTable/dbo.Students.sql||{0058A1F7-65F3-4DB9-B3D0-CA7E64DD73CD}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F6383DA0-9110-4E66-A350-7CB31E65E28F}|WebApplication2.csproj|c:\\users\\asus\\desktop\\iti\\mvc\\webapplication2\\views\\student\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{F6383DA0-9110-4E66-A350-7CB31E65E28F}|WebApplication2.csproj|solutionrelative:views\\student\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{F6383DA0-9110-4E66-A350-7CB31E65E28F}|WebApplication2.csproj|c:\\users\\asus\\desktop\\iti\\mvc\\webapplication2\\wwwroot\\css\\site.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{F6383DA0-9110-4E66-A350-7CB31E65E28F}|WebApplication2.csproj|solutionrelative:wwwroot\\css\\site.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{F6383DA0-9110-4E66-A350-7CB31E65E28F}|WebApplication2.csproj|c:\\users\\asus\\desktop\\iti\\mvc\\webapplication2\\views\\student\\detailsvm.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{F6383DA0-9110-4E66-A350-7CB31E65E28F}|WebApplication2.csproj|solutionrelative:views\\student\\detailsvm.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F6383DA0-9110-4E66-A350-7CB31E65E28F}|WebApplication2.csproj|c:\\users\\asus\\desktop\\iti\\mvc\\webapplication2\\views\\student\\_add\u0026editpartial.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{F6383DA0-9110-4E66-A350-7CB31E65E28F}|WebApplication2.csproj|solutionrelative:views\\student\\_add\u0026editpartial.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{F6383DA0-9110-4E66-A350-7CB31E65E28F}|WebApplication2.csproj|c:\\users\\asus\\desktop\\iti\\mvc\\webapplication2\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F6383DA0-9110-4E66-A350-7CB31E65E28F}|WebApplication2.csproj|solutionrelative:controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F6383DA0-9110-4E66-A350-7CB31E65E28F}|WebApplication2.csproj|c:\\users\\asus\\desktop\\iti\\mvc\\webapplication2\\views\\student\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{F6383DA0-9110-4E66-A350-7CB31E65E28F}|WebApplication2.csproj|solutionrelative:views\\student\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     }
   ],
   "DocumentGroupContainers": [
@@ -36,37 +34,76 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 3,
           "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "site.css",
+              "DocumentMoniker": "C:\\Users\\Asus\\Desktop\\ITI\\MVC\\WebApplication2\\wwwroot\\css\\site.css",
+              "RelativeDocumentMoniker": "wwwroot\\css\\site.css",
+              "ToolTip": "C:\\Users\\Asus\\Desktop\\ITI\\MVC\\WebApplication2\\wwwroot\\css\\site.css",
+              "RelativeToolTip": "wwwroot\\css\\site.css",
+              "ViewState": "AgIAABYAAAAAAAAAAIAwwCcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2025-04-02T16:59:16.663Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\Asus\\Desktop\\ITI\\MVC\\WebApplication2\\Views\\Admin\\Index.cshtml",
+              "RelativeDocumentMoniker": "Views\\Admin\\Index.cshtml",
+              "ToolTip": "C:\\Users\\Asus\\Desktop\\ITI\\MVC\\WebApplication2\\Views\\Admin\\Index.cshtml",
+              "RelativeToolTip": "Views\\Admin\\Index.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAEQAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-04-02T15:47:35.093Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "AccountController.cs",
+              "DocumentMoniker": "C:\\Users\\Asus\\Desktop\\ITI\\MVC\\WebApplication2\\Controllers\\AccountController.cs",
+              "RelativeDocumentMoniker": "Controllers\\AccountController.cs",
+              "ToolTip": "C:\\Users\\Asus\\Desktop\\ITI\\MVC\\WebApplication2\\Controllers\\AccountController.cs",
+              "RelativeToolTip": "Controllers\\AccountController.cs",
+              "ViewState": "AgIAAPkAAAAAAAAAAAAYwAUBAABWAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-02T14:29:16.005Z",
+              "EditorCaption": ""
+            },
             {
               "$type": "Document",
               "DocumentIndex": 0,
               "Title": "_Layout.cshtml",
               "DocumentMoniker": "C:\\Users\\Asus\\Desktop\\ITI\\MVC\\WebApplication2\\Views\\Shared\\_Layout.cshtml",
               "RelativeDocumentMoniker": "Views\\Shared\\_Layout.cshtml",
-              "ToolTip": "C:\\Users\\Asus\\Desktop\\ITI\\MVC\\WebApplication2\\Views\\Shared\\_Layout.cshtml*",
-              "RelativeToolTip": "Views\\Shared\\_Layout.cshtml*",
-              "ViewState": "AgIAAD0AAAAAAAAAAAAawEUAAACHAAAAAAAAAA==",
+              "ToolTip": "C:\\Users\\Asus\\Desktop\\ITI\\MVC\\WebApplication2\\Views\\Shared\\_Layout.cshtml",
+              "RelativeToolTip": "Views\\Shared\\_Layout.cshtml",
+              "ViewState": "AgIAAA0AAAAAAAAAAAAQwBYAAABGAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2025-04-02T03:51:30.657Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 3,
               "Title": "DetailsVM.cshtml",
               "DocumentMoniker": "C:\\Users\\Asus\\Desktop\\ITI\\MVC\\WebApplication2\\Views\\Student\\DetailsVM.cshtml",
               "RelativeDocumentMoniker": "Views\\Student\\DetailsVM.cshtml",
               "ToolTip": "C:\\Users\\Asus\\Desktop\\ITI\\MVC\\WebApplication2\\Views\\Student\\DetailsVM.cshtml",
               "RelativeToolTip": "Views\\Student\\DetailsVM.cshtml",
-              "ViewState": "AgIAAA4AAAAAAAAAAAAQwBoAAAAwAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAtAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2025-04-02T03:32:15.753Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 5,
               "Title": "Edit.cshtml",
               "DocumentMoniker": "C:\\Users\\Asus\\Desktop\\ITI\\MVC\\WebApplication2\\Views\\Student\\Edit.cshtml",
               "RelativeDocumentMoniker": "Views\\Student\\Edit.cshtml",
@@ -75,52 +112,6 @@
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2025-04-02T03:14:56.297Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "dbo.Students [Data]",
-              "DocumentMoniker": "ViewDataWindow_MSSQL__/./ITIProj/True/SqlTable/dbo.Students.sql",
-              "ToolTip": "dbo.Students [Data]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
-              "WhenOpened": "2025-04-02T03:02:46.389Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "StudentController.cs",
-              "DocumentMoniker": "C:\\Users\\Asus\\Desktop\\ITI\\MVC\\WebApplication2\\Controllers\\StudentController.cs",
-              "RelativeDocumentMoniker": "Controllers\\StudentController.cs",
-              "ToolTip": "C:\\Users\\Asus\\Desktop\\ITI\\MVC\\WebApplication2\\Controllers\\StudentController.cs",
-              "RelativeToolTip": "Controllers\\StudentController.cs",
-              "ViewState": "AgIAAG4AAAAAAAAAAAAAwHUAAAAMAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-01T00:42:28.704Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "dbo.Course_Stds [Data]",
-              "DocumentMoniker": "ViewDataWindow_MSSQL__/./ITIProj/True/SqlTable/dbo.Course_Stds.sql",
-              "ToolTip": "dbo.Course_Stds [Data]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
-              "WhenOpened": "2025-04-02T03:45:05.674Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "_Add\u0026EditPartial.cshtml",
-              "DocumentMoniker": "C:\\Users\\Asus\\Desktop\\ITI\\MVC\\WebApplication2\\Views\\Student\\_Add\u0026EditPartial.cshtml",
-              "RelativeDocumentMoniker": "Views\\Student\\_Add\u0026EditPartial.cshtml",
-              "ToolTip": "C:\\Users\\Asus\\Desktop\\ITI\\MVC\\WebApplication2\\Views\\Student\\_Add\u0026EditPartial.cshtml",
-              "RelativeToolTip": "Views\\Student\\_Add\u0026EditPartial.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-04-02T01:48:46.512Z",
               "EditorCaption": ""
             }
           ]

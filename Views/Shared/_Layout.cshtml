@@ -14,22 +14,22 @@
 <body>
     <header>
         <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
-            <div class="container-fluid">
+            <div class="container-fluid w-100">
                 <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">Course Management System</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
                 aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
-                <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
-                    <ul class="navbar-nav flex-grow-1">
+                <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between w-100">
+                    <ul class="navbar-nav flex-grow-1 w-100 d-flex  ">
      
                         @if (!User.Identity.IsAuthenticated)
                         {
-                            <li class="nav-item">
+                            <li class="nav-item me-0" >
                                 <a class="nav-link text-dark" asp-area="" asp-controller="Account" asp-action="Login">Login</a>
                             </li>
                         }
-                        @if (User.Identity.IsAuthenticated)
+                        @if ( User.Identity.IsAuthenticated)
                         {
                             <li class="nav-item">
                                 <a class="nav-link text-dark" asp-area="" asp-controller="Account" asp-action="SignOut">Sign out</a>
@@ -52,7 +52,17 @@
                             <li class="nav-item">
                                 <a class="nav-link text-dark" asp-area="" asp-controller="Instructor" asp-action="Index">Instructor</a>
                             </li>
-                            
+                            <li class="nav-item">
+                                <a class="nav-link text-dark" asp-area="" asp-controller="Student" asp-action="Index">Student</a>
+                            </li>
+                            <li class="nav-item">
+                                <img src="@User.Claims.FirstOrDefault(p => p.Type == "Img")?.Value ?? " "/images/Admin.png"
+                                     class="profile-img" />
+                            </li>
+                            <li class="nav-item">
+                                <img src="@Url.Content(User.Claims.FirstOrDefault(p => p.Type == "Img")?.Value ?? "~/images/default-profile.png")"
+                                     class="profile-img" />
+                            </li>
                         }
                         @if (User.IsInRole("Instructor"))
                         {
@@ -62,17 +72,43 @@
                             <li class="nav-item">
                                 <a class="nav-link text-dark" asp-area="" asp-controller="Courses" asp-action="Index">Courses</a>
                             </li>
-
+                            <li class="nav-item">
+                                <img src="@Url.Content(User.Claims.FirstOrDefault(p => p.Type == "Img")?.Value ?? "~/images/default-profile.png")"
+                                     class="profile-img" />
+                            </li>
                         }
                         @if (User.IsInRole("Student"))
                         {
                             <li class="nav-item">
-                                <a class="nav-link text-dark" asp-area="" asp-controller="Student" asp-action="DetailsVM">MyProfile</a>
+                                <a class="nav-link text-dark" asp-area="" asp-controller="Student" asp-action="DetailsVM" asp-route-id="@int.Parse(User.Claims.FirstOrDefault(c => c.Type == "sid")?.Value ?? "0")">MyProfile</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link text-dark" asp-area="" asp-controller="Student" asp-action="Edit">View and change Courses</a>
+                                <a class="nav-link text-dark" asp-area="" asp-controller="Student" asp-action="Edit" asp-route-id="@int.Parse(User.Claims.FirstOrDefault(c => c.Type == "sid")?.Value ?? "0")">View and change Courses</a>
+                            </li>
+                            <li class="nav-item">
+                                <img src="@Url.Content(User.Claims.FirstOrDefault(p => p.Type == "Img")?.Value ?? "~/images/default-profile.png")"
+                                     class="profile-img" />
                             </li>
 
+
+                        }
+                        @if (User.IsInRole("HR"))
+                        {
+                            <li class="nav-item">
+                                <a class="nav-link text-dark" asp-area="" asp-controller="Student" asp-action="Index">Students</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-dark" asp-area="" asp-controller="Instructor" asp-action="Index">Instructors</a>
+                            </li>
+                            <li class="nav-item">
+                                <img src="@User.Claims.FirstOrDefault(p=>p.Type=="Img")?.Value" />
+
+                            </li>
+                           
+                            <li class="nav-item">
+                                <img src="@Url.Content(User.Claims.FirstOrDefault(p => p.Type == "Img")?.Value ?? "~/images/default-profile.png")"
+                                     class="profile-img" />
+                            </li>
                         }
                     </ul>
                 </div>

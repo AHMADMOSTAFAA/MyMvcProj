@@ -82,7 +82,7 @@ namespace WebApplication2.Controllers
                                 }
                             }
                             await SendConfirmationEmail(applicationUser);
-                            TempData["Success"] = "User registered and assigned to role!";
+                            TempData["Success"] = "User registered and assigned to role! an Email Has Been Sent For Verfification";
                             return RedirectToAction("Login");
 
                         }
@@ -243,9 +243,9 @@ namespace WebApplication2.Controllers
         {
             if (ModelState.IsValid)
             {
-                // Use Include() to eagerly load the Student navigation property
+                
                 ApplicationUser applicationUser = await _userManager.Users
-                    .Include(u => u.Student).Include(u=>u.Instructor)// Ensure Student is loaded
+                    .Include(u => u.Student).Include(u=>u.Instructor)
                     .FirstOrDefaultAsync(u => u.UserName == account.UserName);
 
                 if (applicationUser != null)
@@ -254,10 +254,13 @@ namespace WebApplication2.Controllers
                     if (CheckPassword)
                     {
                         List<Claim> claims = new List<Claim>
-                {
-                    new Claim("UserAddress", applicationUser.Address)
-                };
-
+                        {
+                          new Claim("UserAddress", applicationUser.Address),
+                        };
+                        if (await _userManager.IsInRoleAsync(applicationUser,"Student")) {
+                            claims.Add(new Claim("sid", applicationUser.Student.Id.ToString()));
+                            claims.Add(new Claim("Img", applicationUser.Student.IMG??""));
+                        }
                         await _signInManager.SignInWithClaimsAsync(applicationUser, account.RememberMe, claims);
 
                         if (await _userManager.IsInRoleAsync(applicationUser, "Admin"))
@@ -268,6 +271,7 @@ namespace WebApplication2.Controllers
                             return RedirectToAction("Index", "Course");
                         else if (await _userManager.IsInRoleAsync(applicationUser, "Student"))
                             return RedirectToAction("DetailsVM", "Student", new { id = applicationUser.Student.Id });
+
 
                     }
                 }
