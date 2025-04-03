@@ -36,22 +36,42 @@ namespace WebApplication2.Controllers
             }
             return Json(true);
         }
-        public IActionResult DetailsVM(int id)
+
+       
+        private static bool _isLoaded = false; // Flag to track execution
+        [Authorize(Roles = "Instructor")]
+        public IActionResult IDetailsVM(int id)
         {
+            if (_isLoaded)
+                return View(); // Prevents multiple executions
+
+            _isLoaded = true; // Set flag to true to prevent re-execution
 
             var instructor = insRepo.InsWithHisCourses(id);
-            InstructorDetailsVM instructorVM = new InstructorDetailsVM();
-            instructorVM.Id = instructor.Id;
-            instructorVM.FullName = instructor.FName + instructor.LName;
+            if (instructor == null)
+            {
+                _isLoaded = false; // Reset flag if instructor not found
+                return NotFound();
+            }
 
-            instructorVM.HireDate = instructor.HireDate;
-            instructorVM.Salary = instructor.Salary;
-            instructorVM.Age = instructor.Age;
-            instructorVM.IMG = instructor.IMG;
-            instructorVM.DepartmentId = instructor.DepartmentId;
-            instructorVM.Courses = instructor.Courses.Select(c => c.Name).ToList();
+            InstructorDetailsVM instructorVM = new InstructorDetailsVM()
+            {
+                Id = instructor.Id,
+                FullName = instructor.FName + " " + instructor.LName,
+                HireDate = instructor.HireDate,
+                Salary = instructor.Salary,
+                Age = instructor.Age,
+                IMG = instructor.IMG,
+                DepartmentId = instructor.DepartmentId,
+                Courses = instructor.Courses.Select(c => c.Name).ToList(),
+            };
+
+            _isLoaded = false; // Reset flag after successful execution
+
             return View(instructorVM);
         }
+
+
         [HttpGet]
         [Authorize(Roles ="Admin")]
         public IActionResult Add()
@@ -83,6 +103,7 @@ namespace WebApplication2.Controllers
             return View("Add", ins);
         }
         [HttpGet]
+        [Authorize(Roles ="HR")]
         public IActionResult Edit(int id)
         {
             var ins = insRepo.FindInstructor(id);
@@ -92,6 +113,7 @@ namespace WebApplication2.Controllers
             return View(ins);
         }
         [HttpPost]
+        [Authorize(Roles = "HR")]
         public IActionResult Edit(Instructor i, int[] courses)
         {
             if (ModelState.IsValid)
@@ -128,7 +150,7 @@ namespace WebApplication2.Controllers
             ViewBag.InsCources = i.Courses.Select(c => c.Id).ToList();
             return View("Edit", i);
         }
-        [Authorize(Roles = "Admin")]
+        [Authorize(Roles = "HR")]
         public IActionResult delete(int id)
         {
             insRepo.Delete(id);

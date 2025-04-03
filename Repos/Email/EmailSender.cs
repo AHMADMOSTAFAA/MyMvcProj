@@ -7,10 +7,10 @@ using System.Threading.Tasks;
 
 public class EmailSender : IEmailSender
 {
-    private readonly string _smtpServer = "smtp.gmail.com"; // Replace with your SMTP provider
+    private readonly string _smtpServer = "smtp.gmail.com"; 
     private readonly int _smtpPort = 587;
-    private readonly string _smtpUsername = "ahmadmostafaa02@gmail.com"; // Replace with your email
-    private readonly string _smtpPassword = "fobf hhaa oyvu ehps"; // Replace with your password
+    private readonly string _smtpUsername = "ahmadmostafaa02@gmail.com"; 
+    private readonly string _smtpPassword = "fobf hhaa oyvu ehps"; 
 
     public async Task SendEmailAsync(string email, string subject, string message)
     {

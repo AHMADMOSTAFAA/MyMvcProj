@@ -610,6 +610,7 @@ C:\Users\Asus\Desktop\ITI\MVC\WebApplication2\obj\Debug\net9.0\WebApplication2.s
 C:\Users\Asus\Desktop\ITI\MVC\WebApplication2\obj\Debug\net9.0\scopedcss\Views\Shared\_Layout.cshtml.rz.scp.css
 C:\Users\Asus\Desktop\ITI\MVC\WebApplication2\obj\Debug\net9.0\scopedcss\bundle\WebApplication2.styles.css
 C:\Users\Asus\Desktop\ITI\MVC\WebApplication2\obj\Debug\net9.0\scopedcss\projectbundle\WebApplication2.bundle.scp.css
+C:\Users\Asus\Desktop\ITI\MVC\WebApplication2\obj\Debug\net9.0\compressed\sde506kbqk-b09dt46wzp.gz
 C:\Users\Asus\Desktop\ITI\MVC\WebApplication2\obj\Debug\net9.0\compressed\iophgu96us-mf45fbw2f4.gz
 C:\Users\Asus\Desktop\ITI\MVC\WebApplication2\obj\Debug\net9.0\compressed\izqd1qqyma-8flq4k35dk.gz
 C:\Users\Asus\Desktop\ITI\MVC\WebApplication2\obj\Debug\net9.0\compressed\h3npaz5vl3-qbt6h4ox5y.gz
@@ -697,4 +698,3 @@ C:\Users\Asus\Desktop\ITI\MVC\WebApplication2\obj\Debug\net9.0\refint\WebApplica
 C:\Users\Asus\Desktop\ITI\MVC\WebApplication2\obj\Debug\net9.0\WebApplication2.pdb
 C:\Users\Asus\Desktop\ITI\MVC\WebApplication2\obj\Debug\net9.0\WebApplication2.genruntimeconfig.cache
 C:\Users\Asus\Desktop\ITI\MVC\WebApplication2\obj\Debug\net9.0\ref\WebApplication2.dll
-C:\Users\Asus\Desktop\ITI\MVC\WebApplication2\obj\Debug\net9.0\compressed\sde506kbqk-b09dt46wzp.gz

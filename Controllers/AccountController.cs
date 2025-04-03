@@ -45,13 +45,14 @@ namespace WebApplication2.Controllers
                 ApplicationUser applicationUser=new ApplicationUser();
                 applicationUser.UserName = registerVM.UserName;
                 applicationUser.PasswordHash = registerVM.Password;
-                applicationUser.Email = registerVM.Email;
-                if (id!=null)
+                if (id != null)
                 {
-                    
-                    var student =_studentRepo.Student(id.Value);
+
+                    var student = _studentRepo.Student(id.Value);
                     applicationUser.Email = student.Email;
                 }
+                applicationUser.Email = registerVM.Email;
+               
                 applicationUser.Address = registerVM.Address;
                 IdentityResult identityResult=await _userManager.CreateAsync(applicationUser,registerVM.Password);//
                 if (identityResult.Succeeded) 
@@ -247,6 +248,8 @@ namespace WebApplication2.Controllers
                 ApplicationUser applicationUser = await _userManager.Users
                     .Include(u => u.Student).Include(u=>u.Instructor)
                     .FirstOrDefaultAsync(u => u.UserName == account.UserName);
+ 
+
 
                 if (applicationUser != null)
                 {
@@ -261,14 +264,19 @@ namespace WebApplication2.Controllers
                             claims.Add(new Claim("sid", applicationUser.Student.Id.ToString()));
                             claims.Add(new Claim("Img", applicationUser.Student.IMG??""));
                         }
-                        await _signInManager.SignInWithClaimsAsync(applicationUser, account.RememberMe, claims);
+                        else if (await _userManager.IsInRoleAsync(applicationUser, "Instructor"))
+                        {
+                            claims.Add(new Claim("sid", applicationUser.Instructor.Id.ToString()));
+                            claims.Add(new Claim("Img", applicationUser.Instructor.IMG ?? ""));
+                        }
+                            await _signInManager.SignInWithClaimsAsync(applicationUser, account.RememberMe, claims);
 
                         if (await _userManager.IsInRoleAsync(applicationUser, "Admin"))
                             return RedirectToAction("Index", "Admin");
                         else if (await _userManager.IsInRoleAsync(applicationUser, "HR"))
                             return RedirectToAction("Index", "Instructor");
                         else if (await _userManager.IsInRoleAsync(applicationUser, "Instructor"))
-                            return RedirectToAction("Index", "Course");
+                            return RedirectToAction("IDetailsVM", "Instructor", new { id = applicationUser.Instructor.Id });
                         else if (await _userManager.IsInRoleAsync(applicationUser, "Student"))
                             return RedirectToAction("DetailsVM", "Student", new { id = applicationUser.Student.Id });
 
@@ -283,12 +291,78 @@ namespace WebApplication2.Controllers
             return View("login", account);
         }
 
+        [HttpGet]
+        public IActionResult ForgotPassword()
+        {
+            return View();
+        }
+        [HttpPost]
+        public async Task<IActionResult> ForgotPassword(ForgotPasswordVM model)
+        {
+            if (!ModelState.IsValid)
+            {
+                return View(model);
+            }
+
+            var user = await _userManager.FindByEmailAsync(model.Email);
+            if (user == null || !(await _userManager.IsEmailConfirmedAsync(user)))
+            {
+                TempData["ErrorMessage"] = "Invalid email or unconfirmed account.";
+                return View();
+            }
+
+            var token = await _userManager.GeneratePasswordResetTokenAsync(user);
+            var resetLink = Url.Action("ResetPassword", "Account",
+                new { token, email = user.Email }, Request.Scheme);
+
+            await _emailSender.SendEmailAsync(user.Email, "Reset Your Password",
+                $"Click <a href='{resetLink}'>here</a> to reset your password.");
+
+            TempData["Success"] = "Password reset link sent! Check your email.";
+            return RedirectToAction("Login");
+        }
+        [HttpGet]
+        public IActionResult ResetPassword(string token, string email)
+        {
+            if (token == null || email == null)
+            {
+                return BadRequest("Invalid password reset request.");
+            }
+
+            var model = new ResetPasswordVM { Token = token, Email = email };
+            return View(model);
+        }
+        [HttpPost]
+        public async Task<IActionResult> ResetPassword(ResetPasswordVM model)
+        {
+            if (!ModelState.IsValid)
+            {
+                return View(model);
+            }
+
+            var user = await _userManager.FindByEmailAsync(model.Email);
+            if (user == null)
+            {
+                TempData["ErrorMessage"] = "User not found.";
+                return View();
+            }
+
+            var result = await _userManager.ResetPasswordAsync(user, model.Token, model.NewPassword);
+            if (result.Succeeded)
+            {
+                TempData["Success"] = "Password reset successfully!";
+                return RedirectToAction("Login");
+            }
+
+            TempData["ErrorMessage"] = string.Join(", ", result.Errors.Select(e => e.Description));
+            return View();
+        }
+
 
         public async Task<IActionResult> SignOut()
         {
             await _signInManager.SignOutAsync();
-            return View("login");
+            return RedirectToAction("Login");
         }
-
     }
 }

@@ -1,0 +1,22 @@
+﻿@model WebApplication2.ViewModels.InstructorDetailsVM
+
+<div class="card" style="width: 18rem;">
+    <img src="~/Images/default-profile.png" class="card-img-top" alt="Instructor Image">
+
+    <div class="card-body">
+        <h5 class="card-title" asp-for="FullName"></h5>
+        <p class="card-text">ID: @Model.Id</p>
+        <p class="card-text">Hire Date: @Model.HireDate</p>
+        <p class="card-text">Salary: @Model.Salary</p>
+        <p class="card-text">Age: @Model.Age</p>
+        <p class="card-text">Department ID: @Model.DepartmentId</p>
+        <a asp-controller="Instructor" asp-action="Index" class="btn btn-primary">Back</a>
+    </div>
+</div>
+
+<ul class="list-group">
+    @foreach (var course in Model.Courses)
+    {
+        <li class="list-group-item">@course</li>
+    }
+</ul>
