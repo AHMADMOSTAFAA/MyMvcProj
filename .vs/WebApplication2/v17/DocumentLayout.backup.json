@@ -3,20 +3,27 @@
   "WorkspaceRootPath": "C:\\Users\\Asus\\Desktop\\ITI\\MVC\\WebApplication2\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{F6383DA0-9110-4E66-A350-7CB31E65E28F}|WebApplication2.csproj|c:\\users\\asus\\desktop\\iti\\mvc\\webapplication2\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{F6383DA0-9110-4E66-A350-7CB31E65E28F}|WebApplication2.csproj|solutionrelative:views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|ViewDataWindow_MSSQL__/./ITIProj/True/SqlTable/dbo.AspNetUsers.sql||{0058A1F7-65F3-4DB9-B3D0-CA7E64DD73CD}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{F6383DA0-9110-4E66-A350-7CB31E65E28F}|WebApplication2.csproj|c:\\users\\asus\\desktop\\iti\\mvc\\webapplication2\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{F6383DA0-9110-4E66-A350-7CB31E65E28F}|WebApplication2.csproj|solutionrelative:controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F6383DA0-9110-4E66-A350-7CB31E65E28F}|WebApplication2.csproj|c:\\users\\asus\\desktop\\iti\\mvc\\webapplication2\\views\\account\\forgotpassword.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{F6383DA0-9110-4E66-A350-7CB31E65E28F}|WebApplication2.csproj|solutionrelative:views\\account\\forgotpassword.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{F6383DA0-9110-4E66-A350-7CB31E65E28F}|WebApplication2.csproj|c:\\users\\asus\\desktop\\iti\\mvc\\webapplication2\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{F6383DA0-9110-4E66-A350-7CB31E65E28F}|WebApplication2.csproj|solutionrelative:views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F6383DA0-9110-4E66-A350-7CB31E65E28F}|WebApplication2.csproj|c:\\users\\asus\\desktop\\iti\\mvc\\webapplication2\\views\\account\\resetpassword.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{F6383DA0-9110-4E66-A350-7CB31E65E28F}|WebApplication2.csproj|solutionrelative:views\\account\\resetpassword.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{F6383DA0-9110-4E66-A350-7CB31E65E28F}|WebApplication2.csproj|c:\\users\\asus\\desktop\\iti\\mvc\\webapplication2\\views\\admin\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{F6383DA0-9110-4E66-A350-7CB31E65E28F}|WebApplication2.csproj|solutionrelative:views\\admin\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F6383DA0-9110-4E66-A350-7CB31E65E28F}|WebApplication2.csproj|c:\\users\\asus\\desktop\\iti\\mvc\\webapplication2\\views\\account\\register.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{F6383DA0-9110-4E66-A350-7CB31E65E28F}|WebApplication2.csproj|solutionrelative:views\\account\\register.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F6383DA0-9110-4E66-A350-7CB31E65E28F}|WebApplication2.csproj|c:\\users\\asus\\desktop\\iti\\mvc\\webapplication2\\views\\account\\registerstd.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{F6383DA0-9110-4E66-A350-7CB31E65E28F}|WebApplication2.csproj|solutionrelative:views\\account\\registerstd.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     }
   ],
   "DocumentGroupContainers": [
@@ -26,45 +33,55 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 2,
               "Title": "_Layout.cshtml",
               "DocumentMoniker": "C:\\Users\\Asus\\Desktop\\ITI\\MVC\\WebApplication2\\Views\\Shared\\_Layout.cshtml",
               "RelativeDocumentMoniker": "Views\\Shared\\_Layout.cshtml",
-              "ToolTip": "C:\\Users\\Asus\\Desktop\\ITI\\MVC\\WebApplication2\\Views\\Shared\\_Layout.cshtml*",
-              "RelativeToolTip": "Views\\Shared\\_Layout.cshtml*",
-              "ViewState": "AgIAADoAAAAAAAAAAAAlwDsAAAA9AAAAAAAAAA==",
+              "ToolTip": "C:\\Users\\Asus\\Desktop\\ITI\\MVC\\WebApplication2\\Views\\Shared\\_Layout.cshtml",
+              "RelativeToolTip": "Views\\Shared\\_Layout.cshtml",
+              "ViewState": "AgIAADEAAAAAAAAAAAAQwEIAAABgAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-04-03T19:30:28.214Z",
+              "WhenOpened": "2025-04-06T22:36:05.629Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "dbo.AspNetUsers [Data]",
+              "DocumentMoniker": "ViewDataWindow_MSSQL__/./ITIProj/True/SqlTable/dbo.AspNetUsers.sql",
+              "ToolTip": "dbo.AspNetUsers [Data]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
+              "WhenOpened": "2025-04-06T22:17:18.909Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "ResetPassword.cshtml",
-              "DocumentMoniker": "C:\\Users\\Asus\\Desktop\\ITI\\MVC\\WebApplication2\\Views\\Account\\ResetPassword.cshtml",
-              "RelativeDocumentMoniker": "Views\\Account\\ResetPassword.cshtml",
-              "ToolTip": "C:\\Users\\Asus\\Desktop\\ITI\\MVC\\WebApplication2\\Views\\Account\\ResetPassword.cshtml",
-              "RelativeToolTip": "Views\\Account\\ResetPassword.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAABAAAAAAAAAA==",
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\Asus\\Desktop\\ITI\\MVC\\WebApplication2\\Views\\Admin\\Index.cshtml",
+              "RelativeDocumentMoniker": "Views\\Admin\\Index.cshtml",
+              "ToolTip": "C:\\Users\\Asus\\Desktop\\ITI\\MVC\\WebApplication2\\Views\\Admin\\Index.cshtml",
+              "RelativeToolTip": "Views\\Admin\\Index.cshtml",
+              "ViewState": "AgIAADYAAAAAAAAAAAAjwAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-04-03T18:56:08.537Z",
+              "WhenOpened": "2025-04-06T19:12:43.694Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "ForgotPassword.cshtml",
-              "DocumentMoniker": "C:\\Users\\Asus\\Desktop\\ITI\\MVC\\WebApplication2\\Views\\Account\\ForgotPassword.cshtml",
-              "RelativeDocumentMoniker": "Views\\Account\\ForgotPassword.cshtml",
-              "ToolTip": "C:\\Users\\Asus\\Desktop\\ITI\\MVC\\WebApplication2\\Views\\Account\\ForgotPassword.cshtml",
-              "RelativeToolTip": "Views\\Account\\ForgotPassword.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 4,
+              "Title": "Register.cshtml",
+              "DocumentMoniker": "C:\\Users\\Asus\\Desktop\\ITI\\MVC\\WebApplication2\\Views\\Account\\Register.cshtml",
+              "RelativeDocumentMoniker": "Views\\Account\\Register.cshtml",
+              "ToolTip": "C:\\Users\\Asus\\Desktop\\ITI\\MVC\\WebApplication2\\Views\\Account\\Register.cshtml",
+              "RelativeToolTip": "Views\\Account\\Register.cshtml",
+              "ViewState": "AgIAAC8AAAAAAAAAAAAjwAYAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-04-03T18:45:26.895Z",
+              "WhenOpened": "2025-04-06T19:07:23.093Z",
               "EditorCaption": ""
             },
             {
@@ -75,10 +92,22 @@
               "RelativeDocumentMoniker": "Controllers\\AccountController.cs",
               "ToolTip": "C:\\Users\\Asus\\Desktop\\ITI\\MVC\\WebApplication2\\Controllers\\AccountController.cs",
               "RelativeToolTip": "Controllers\\AccountController.cs",
-              "ViewState": "AgIAAAYBAAAAAAAAAAAlwCYBAAAJAAAAAAAAAA==",
+              "ViewState": "AgIAAH0BAAAAAAAAAAAAwIYBAAANAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-02T14:29:16.005Z",
+              "WhenOpened": "2025-04-06T16:25:56.997Z",
               "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "RegisterStd.cshtml",
+              "DocumentMoniker": "C:\\Users\\Asus\\Desktop\\ITI\\MVC\\WebApplication2\\Views\\Account\\RegisterStd.cshtml",
+              "RelativeDocumentMoniker": "Views\\Account\\RegisterStd.cshtml",
+              "ToolTip": "C:\\Users\\Asus\\Desktop\\ITI\\MVC\\WebApplication2\\Views\\Account\\RegisterStd.cshtml",
+              "RelativeToolTip": "Views\\Account\\RegisterStd.cshtml",
+              "ViewState": "AgIAAA0AAAAAAAAAAAAjwBcAAAAlAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-04-06T15:48:55.357Z"
             }
           ]
         }

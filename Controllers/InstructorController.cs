@@ -38,19 +38,19 @@ namespace WebApplication2.Controllers
         }
 
        
-        private static bool _isLoaded = false; // Flag to track execution
+        private static bool _isLoaded = false; 
         [Authorize(Roles = "Instructor")]
         public IActionResult IDetailsVM(int id)
         {
             if (_isLoaded)
-                return View(); // Prevents multiple executions
+                return View(); 
 
-            _isLoaded = true; // Set flag to true to prevent re-execution
+            _isLoaded = true; 
 
             var instructor = insRepo.InsWithHisCourses(id);
             if (instructor == null)
             {
-                _isLoaded = false; // Reset flag if instructor not found
+                _isLoaded = false; 
                 return NotFound();
             }
 
@@ -66,7 +66,7 @@ namespace WebApplication2.Controllers
                 Courses = instructor.Courses.Select(c => c.Name).ToList(),
             };
 
-            _isLoaded = false; // Reset flag after successful execution
+            _isLoaded = false; 
 
             return View(instructorVM);
         }
@@ -118,13 +118,13 @@ namespace WebApplication2.Controllers
         {
             if (ModelState.IsValid)
             {
-                // Fetch the instructor with their existing courses
+
                 var instructor = insRepo.InsWithHisCourses(i.Id);
 
                 if (instructor == null)
                     return NotFound();
 
-                // Update scalar properties
+             
                 instructor.FName = i.FName;
                 instructor.LName = i.LName;
                 instructor.HireDate = i.HireDate;
@@ -133,10 +133,10 @@ namespace WebApplication2.Controllers
                 instructor.IMG = i.IMG;
                 instructor.DepartmentId = i.DepartmentId;
 
-                // Fetch the selected courses
+              
                 var selectedCourses = ICourseRepo.SelectedCrsesIDs(courses);
 
-                // Replace the existing courses with the new list
+               
                 instructor.Courses = selectedCourses;
                 insRepo.UpdateInstructor(instructor);
                
@@ -144,7 +144,7 @@ namespace WebApplication2.Controllers
                 return RedirectToAction("Index");
             }
 
-            // If validation fails, return to the edit view with the model
+           
             ViewBag.courses = ICourseRepo.LoadCourses();
             ViewBag.departments = deptRepo.LoadDeparments();
             ViewBag.InsCources = i.Courses.Select(c => c.Id).ToList();

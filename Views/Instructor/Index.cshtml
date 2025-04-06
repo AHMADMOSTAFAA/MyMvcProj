@@ -10,9 +10,16 @@
             <th scope="col">Department ID</th>
             <th scope="col">Cources</th>
             <th scope="col">IMG</th>
-            <th scope="col">Edit</th>
-            <th scope="col">Details</th>
-            <th scope="col">Delete</th>
+            @if (User.IsInRole("Instructor"))
+            {
+                <th scope="col">Details</th>
+            }
+            @if (User.IsInRole("HR"))
+            {
+                <th scope="col">Edit</th>
+
+                <th scope="col">Delete</th>
+            }
 
 
         </tr>
@@ -29,9 +36,16 @@
                 <td>@i.DepartmentId</td>
                 <td>@foreach (Course crs in i.Courses) { <p>@crs.Name</p>}</td>
                 <td><img src="~/Images/@i.IMG" alt="Alternate Text" /></td>
-                <td scope="col"><a href="/instructor/edit/@i.Id" class="btn btn-warning">Edit</a></td>
-                <td scope="col"><a href="/instructor/DetailsVM/@i.Id" class="btn btn-success">Details</a></td>
-                <td scope="col"><a href="/instructor/Delete/@i.Id" class="btn btn-danger">Delete</a></td>
+                @if (User.IsInRole("Instructor"))
+                {
+                    <td scope="col"><a href="/instructor/DetailsVM/@i.Id" class="btn btn-success">Details</a></td>
+                }
+                @if (User.IsInRole("HR"))
+                {
+                    <td scope="col"><a href="/instructor/edit/@i.Id" class="btn btn-warning">Edit</a></td>
+
+                    <td scope="col"><a href="/instructor/Delete/@i.Id" class="btn btn-danger">Delete</a></td>
+                }
             </tr>
         }
 
@@ -39,5 +53,8 @@
 
     </tbody>
 </table>
-<a href="/instructor/add" class="btn btn-primary">Add+</a>
+@if (User.IsInRole("Admin"))
+{
+    <a href="/instructor/add" class="btn btn-primary">Add+</a>
+}
 

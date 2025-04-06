@@ -30,16 +30,95 @@ namespace WebApplication2.Controllers
             _insRepo=insRepo;
             _emailSender=emailSender;
         }
+
+
+
+
+
         [HttpGet]
-        [Authorize(Roles ="Admin")]
-        public async Task <IActionResult> Register()
+        [Authorize(Roles = "Admin")]
+        public async Task<IActionResult> Register()
         {
-            ViewBag.Roles = await _roleManager.Roles.Select(r => r.Name).ToListAsync();
+            ViewBag.Roles = await _roleManager.Roles.Where(r => r.Name != "Student" && r.Name!="Instructor").Select(r => r.Name).ToListAsync();
             return View();
         }
         [HttpPost]
         [Authorize(Roles = "Admin")]
-        public async Task<IActionResult> Register(RegisterVM registerVM,int?id)
+        public async Task<IActionResult> Register(RegisterVM registerVM)
+        {
+            if (ModelState.IsValid)
+            {
+                ApplicationUser applicationUser = new ApplicationUser();
+                applicationUser.UserName = registerVM.UserName;
+                applicationUser.PasswordHash = registerVM.Password;
+              
+                applicationUser.Email = registerVM.Email;
+
+                applicationUser.Address = registerVM.Address;
+                IdentityResult identityResult = await _userManager.CreateAsync(applicationUser, registerVM.Password);//
+                if (identityResult.Succeeded)
+                {
+                    if (!string.IsNullOrEmpty(registerVM.Role))
+                    {
+                        IdentityResult roleResult = await _userManager.AddToRoleAsync(applicationUser, registerVM.Role);
+                        if (roleResult.Succeeded)
+                        {
+                            
+                            await SendConfirmationEmail(applicationUser);
+                            TempData["Success"] = "User registered and assigned to role! an Email Has Been Sent For Verfification";
+                            return RedirectToAction("Login");
+
+                        }
+                        else
+                        {
+
+                            await _userManager.DeleteAsync(applicationUser);
+                            TempData["ErrorMessage"] = "User registration failed due to role assignment error: " +
+                                string.Join(", ", roleResult.Errors.Select(e => e.Description));
+                        }
+
+                    }
+                    else
+                    {
+
+                        await _userManager.DeleteAsync(applicationUser);
+                        TempData["ErrorMessage"] = "User registration failed: No role selected.";
+                    }
+                }
+                else
+                {
+
+                    TempData["ErrorMessage"] = "User registration failed: " +
+                        string.Join(", ", identityResult.Errors.Select(e => e.Description));
+                }
+            }
+            else
+            {
+                TempData["ErrorMessage"] = "Invalid input. Please try again.";
+            }
+            ViewBag.Roles = await _roleManager.Roles.Select(r => r.Name).ToListAsync();
+
+            return View("Register", registerVM);
+        }
+
+
+
+
+
+
+
+
+
+        [HttpGet]
+        [Authorize(Roles ="Admin")]
+        public async Task <IActionResult> RegisterStd()
+        {
+            ViewBag.Roles = await _roleManager.Roles.Where(r=>r.Name=="Student").Select(r => r.Name).ToListAsync();
+            return View();
+        }
+        [HttpPost]
+        [Authorize(Roles = "Admin")]
+        public async Task<IActionResult> RegisterStd(RegisterVM registerVM,int?id)
         {
             if (ModelState.IsValid) { 
                 ApplicationUser applicationUser=new ApplicationUser();
@@ -116,14 +195,14 @@ namespace WebApplication2.Controllers
             }
             ViewBag.Roles = await _roleManager.Roles.Select(r => r.Name).ToListAsync();
 
-            return View("Register",registerVM);
+            return View("RegisterStd",registerVM);
         }
 
         [HttpGet]
         [Authorize(Roles = "Admin")]
         public async Task<IActionResult> RegisterIns()
         {
-            ViewBag.Roles = await _roleManager.Roles.Select(r => r.Name).ToListAsync();
+            ViewBag.Roles = await _roleManager.Roles.Where(r=>r.Name=="Instructor").Select(r => r.Name).ToListAsync();
             return View();
         }
         [HttpPost]
@@ -192,7 +271,7 @@ namespace WebApplication2.Controllers
             }
             ViewBag.Roles = await _roleManager.Roles.Select(r => r.Name).ToListAsync();
 
-            return View("Register", registerVM);
+            return View("RegisterIns", registerVM);
         }
 
         private async Task SendConfirmationEmail(ApplicationUser applicationUser)
@@ -261,13 +340,20 @@ namespace WebApplication2.Controllers
                           new Claim("UserAddress", applicationUser.Address),
                         };
                         if (await _userManager.IsInRoleAsync(applicationUser,"Student")) {
-                            claims.Add(new Claim("sid", applicationUser.Student.Id.ToString()));
-                            claims.Add(new Claim("Img", applicationUser.Student.IMG??""));
+                            if (applicationUser.Student is not null)
+                            {
+                                claims.Add(new Claim("sid", applicationUser.Student.Id.ToString()));
+                                claims.Add(new Claim("Img", applicationUser.Student.IMG ?? ""));
+                            }
+                           
                         }
                         else if (await _userManager.IsInRoleAsync(applicationUser, "Instructor"))
                         {
-                            claims.Add(new Claim("sid", applicationUser.Instructor.Id.ToString()));
-                            claims.Add(new Claim("Img", applicationUser.Instructor.IMG ?? ""));
+                            if (applicationUser.Instructor is not null)
+                            {
+                                claims.Add(new Claim("sid", applicationUser.Instructor.Id.ToString()));
+                                claims.Add(new Claim("Img", applicationUser.Instructor.IMG ?? ""));
+                            }
                         }
                             await _signInManager.SignInWithClaimsAsync(applicationUser, account.RememberMe, claims);
 

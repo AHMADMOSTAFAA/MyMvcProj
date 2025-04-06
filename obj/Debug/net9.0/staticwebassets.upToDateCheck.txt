@@ -76,7 +76,10 @@ wwwroot\demo\chart-pie-demo.js
 wwwroot\demo\datatables-demo.js
 wwwroot\favicon.ico
 wwwroot\Images\088826a1-a7d2-4f61-b20b-e993dcad6741.jpg
+wwwroot\Images\145af500-0575-4c4e-8930-1b93f267c6ab.jpg
 wwwroot\Images\1607913b-a344-4269-aca8-c48d8ca1b8fe.jpg
+wwwroot\Images\323dedea-53c9-4aa8-8856-9f6d0228492d.jpg
+wwwroot\Images\6ac018c2-002e-4242-a365-0026a8e12bf2.jpg
 wwwroot\Images\70f708f1-20a5-47c3-a011-87186485698b.jpg
 wwwroot\Images\7aea2ec3-6622-4382-a19f-f7bb86c3e6a9.jpg
 wwwroot\Images\866e6691-49ca-42f8-a011-4acc961ca698.jpg
@@ -84,11 +87,13 @@ wwwroot\Images\93a74f67-b23e-44ad-bb79-566e15800a85.jpg
 wwwroot\Images\a85b5236-1df3-4b07-b7bf-59b185941f23.jpg
 wwwroot\Images\Admin.png
 wwwroot\Images\b5f62e70-f740-450c-a0e6-363b5c3b1757.jpg
+wwwroot\Images\bb65e3c1-213e-44ad-9c73-790e042be9a1.jpg
 wwwroot\Images\c67d1933-dc2e-472e-b09b-9008ed1d7f05.jpg
 wwwroot\Images\c6a5b30c-a3d4-43ac-b5da-ab61a248edf6.png
 wwwroot\Images\d96b78fe-c195-4045-9890-5a32f0b38ab4.jpg
 wwwroot\Images\da89485a-6ae5-4c91-83d7-07205df2972e.png
 wwwroot\Images\default-profile.png
+wwwroot\Images\e4b61427-d9c9-4466-b659-c1edb99db04e.jpg
 wwwroot\Images\e4c9a61d-4685-4a8c-bcc5-620f92feaef9.png
 wwwroot\Images\error-404-monochrome.svg
 wwwroot\Images\f28900a3-4895-4e72-83bb-9d00ab75c49e.jpg

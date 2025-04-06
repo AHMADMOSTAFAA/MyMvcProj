@@ -9,8 +9,20 @@
       "PackagePath": "staticwebassets\\Images\\088826a1-a7d2-4f61-b20b-e993dcad6741.jpg"
     },
     {
+      "Id": "C:\\Users\\Asus\\Desktop\\ITI\\MVC\\WebApplication2\\wwwroot\\Images\\145af500-0575-4c4e-8930-1b93f267c6ab.jpg",
+      "PackagePath": "staticwebassets\\Images\\145af500-0575-4c4e-8930-1b93f267c6ab.jpg"
+    },
+    {
       "Id": "C:\\Users\\Asus\\Desktop\\ITI\\MVC\\WebApplication2\\wwwroot\\Images\\1607913b-a344-4269-aca8-c48d8ca1b8fe.jpg",
       "PackagePath": "staticwebassets\\Images\\1607913b-a344-4269-aca8-c48d8ca1b8fe.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\ITI\\MVC\\WebApplication2\\wwwroot\\Images\\323dedea-53c9-4aa8-8856-9f6d0228492d.jpg",
+      "PackagePath": "staticwebassets\\Images\\323dedea-53c9-4aa8-8856-9f6d0228492d.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\ITI\\MVC\\WebApplication2\\wwwroot\\Images\\6ac018c2-002e-4242-a365-0026a8e12bf2.jpg",
+      "PackagePath": "staticwebassets\\Images\\6ac018c2-002e-4242-a365-0026a8e12bf2.jpg"
     },
     {
       "Id": "C:\\Users\\Asus\\Desktop\\ITI\\MVC\\WebApplication2\\wwwroot\\Images\\70f708f1-20a5-47c3-a011-87186485698b.jpg",
@@ -41,6 +53,10 @@
       "PackagePath": "staticwebassets\\Images\\b5f62e70-f740-450c-a0e6-363b5c3b1757.jpg"
     },
     {
+      "Id": "C:\\Users\\Asus\\Desktop\\ITI\\MVC\\WebApplication2\\wwwroot\\Images\\bb65e3c1-213e-44ad-9c73-790e042be9a1.jpg",
+      "PackagePath": "staticwebassets\\Images\\bb65e3c1-213e-44ad-9c73-790e042be9a1.jpg"
+    },
+    {
       "Id": "C:\\Users\\Asus\\Desktop\\ITI\\MVC\\WebApplication2\\wwwroot\\Images\\c67d1933-dc2e-472e-b09b-9008ed1d7f05.jpg",
       "PackagePath": "staticwebassets\\Images\\c67d1933-dc2e-472e-b09b-9008ed1d7f05.jpg"
     },
@@ -59,6 +75,10 @@
     {
       "Id": "C:\\Users\\Asus\\Desktop\\ITI\\MVC\\WebApplication2\\wwwroot\\Images\\default-profile.png",
       "PackagePath": "staticwebassets\\Images\\default-profile.png"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\ITI\\MVC\\WebApplication2\\wwwroot\\Images\\e4b61427-d9c9-4466-b659-c1edb99db04e.jpg",
+      "PackagePath": "staticwebassets\\Images\\e4b61427-d9c9-4466-b659-c1edb99db04e.jpg"
     },
     {
       "Id": "C:\\Users\\Asus\\Desktop\\ITI\\MVC\\WebApplication2\\wwwroot\\Images\\e4c9a61d-4685-4a8c-bcc5-620f92feaef9.png",

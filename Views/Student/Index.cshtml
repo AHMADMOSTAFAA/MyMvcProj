@@ -1,6 +1,6 @@
 ﻿@model List<Student>
 @{
-  
+
 }
 <select class="form-control" onchange="Filter(this.value)">Filter By Department
     @foreach(Department d in ViewBag.Departments ){
@@ -17,18 +17,27 @@
             <th scope="col">Department ID</th>
             <th scope="col">Enrolled Courses</th>
             <th scope="col">IMG</th>
-            
-            <th scope="col">Edit</th>
-            <th scope="col">Details</th>
-            <th scope="col">Delete</th>
+
+            @if (User.IsInRole("Student"))
+            {
+                <th scope="col">Details</th>
+            }
+            @if (User.IsInRole("HR"))
+            {
+                <th scope="col">Edit</th>
+                <th scope="col">Delete</th>
+            }
 
         </tr>
     </thead >
     <tbody id="div1">
-    <partial name="_StudentsInDepartment"model="Model" />
+        <partial name="_StudentsInDepartment"model="Model" />
     </tbody>
 </table>
-<a href="/student/Add" class="btn btn-primary">Add+</a>
+@if (User.IsInRole("Admin"))
+{
+    <a href="/student/Add" class="btn btn-primary">Add+</a>
+}
 @section scripts {
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script>

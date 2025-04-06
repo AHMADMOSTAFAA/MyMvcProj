@@ -27,7 +27,7 @@ namespace WebApplication2.Controllers
         public IActionResult Index()
         {
             var students = IStudentRepo.LoadStdWithCrses();
-            ViewBag.Departments = IDeptRepo.LoadDeparments()  ;//?? new List<Department>();
+            ViewBag.Departments = IDeptRepo.LoadDeparments()  ;
             return View(students);
         }
 
@@ -75,7 +75,7 @@ namespace WebApplication2.Controllers
             {
                IStudentRepo.Add(stdvm);
                 var laststd=IStudentRepo.LastStudent();
-                return RedirectToAction("Register", "Account", new { id = laststd.Id });
+                return RedirectToAction("RegisterStd", "Account", new { id = laststd.Id });
             }
 
             stdvm.departments = IDeptRepo.LoadDeparments();
@@ -129,8 +129,8 @@ namespace WebApplication2.Controllers
             return View(stdvm);
         }
 
-      
-        //[Authorize(Roles = "HR")]
+
+        [Authorize(Roles = "HR")]
         public IActionResult Delete(int id)
         {
             var selectedstd = IStudentRepo.Student(id);

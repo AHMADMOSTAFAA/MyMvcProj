@@ -24,12 +24,19 @@
                 <p>No Image</p>
             }
         </td>
-       
-        <td><a href="/student/edit/@s.Id" class="btn btn-warning">Edit</a></td>
-        <td><a href="/student/detailsvm/@s.Id" class="btn btn-success">Details</a></td>
-        <td>
-            <button class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#deletemodal-@s.Id">Delete</button>
-        </td>
+
+        @if (User.IsInRole("Student"))
+        {
+            <td><a href="/student/detailsvm/@s.Id" class="btn btn-success">Details</a></td>
+        }
+        @if (User.IsInRole("HR"))
+        {
+            <td><a href="/student/edit/@s.Id" class="btn btn-warning">Edit</a></td>
+
+            <td>
+                <button class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#deletemodal-@s.Id">Delete</button>
+            </td>
+        }
     </tr>
 
     <!-- Unique Modal for Each Student -->
